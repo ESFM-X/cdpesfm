@@ -19,7 +19,7 @@ def footer():
                                         
                                             dbc.Col([
                                                 
-                                            html.H5("Sigue al CdP ESFM", style = {'font-size':'1.4em'}),#, className="display-6"),
+                                            html.H5("Dirección"),#, className="display-6"),
                                             html.Hr(className="my-2"),
                                         # html.P(
                                             #"Visita nuestras redes sociales",
@@ -27,10 +27,12 @@ def footer():
                                             #    className="lead",
                                             #),
                                             
-                                            html.P('Síguenos en nuestras redes sociales y unéte la comunidad.'),
-                                            html.A('Facebook   ', href = 'https://www.facebook.com/Aurus-Tek-103856351446404',target='_blank', style = {'color':'#6610f2', 'text-align':'center'}),    
+                                            html.P('Av. Instituto Politécnico Nacional s/n Edificio 9 Unidad Profesional “Adolfo López Mateos” Col. San Pedro Zacatenco, Del. Gustavo A. Madero, Ciudad de México C.P. 07738, Ciudad de México; México 2009-2013. Conmutador 01 (55) 5729 6000, ext. 55343',
+                                                    style = {"text-align":"justify"}),
+                                            html.A('Facebook   ', href = '#', style = {'color':'#3b5998', 'text-align':'center'}),    #,target='_blank'
                                             #html.P('-',style = {'color':'white'}),
-                                            html.A('   Instagram', href = 'https://www.instagram.com/aurus_tek/',target='_blank', style = {'padding-left':10,'color':'#dc3545', 'text-align':'center'})    
+                                            html.A('   Instagram', href = '#', style = {'padding-left':10,'color':'#C13584', 'text-align':'center'}),    #,target='_blank'
+                                            html.A('   Discord', href = 'https://discord.com/invite/JxS59BFBu3',target='_blank', style = {'padding-left':10,'color':'#7289da', 'text-align':'center'})    
                                         
                                             ], style = {'color':'black'}),
 
@@ -48,6 +50,7 @@ def footer():
                                         
                                         ]
                                     ),
+                                    html.H6("Página hecha con ❤ por el CdP ESFM", style = {"text-align":'center', "padding-top":30}),
                                     #html.Div(dbc.Button('El canal de YouTube de Aurus Tek', color="link", style = {'width':'100%','margin-left':'auto','margin-right':'auto','color':'#8797b4'}), className="lead", style = {'width':'70%','margin-left':'auto','margin-right':'auto', 'padding-top':0})
                                     
                                 ],

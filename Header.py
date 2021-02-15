@@ -41,7 +41,7 @@ def header():
                                             #dbc.NavItem(dbc.NavLink("Alumnos destacados", href="/destacados"), style ={'list-style-type': 'none'}),
                                             dbc.NavItem(dbc.NavLink("👨‍💻 Proyectos", href="/proyectos"), style ={'list-style-type': 'none', "font-weight": "bold"}),
                                             dbc.NavItem(dbc.NavLink("📑 Convocatoria", href="/convocatoria"), style ={'list-style-type': 'none', "font-weight": "bold"}),
-                                            dbc.NavItem(dbc.NavLink("🧦 Artículos", href="/articulos"), style ={'list-style-type': 'none', "font-weight": "bold"}),
+                                            #dbc.NavItem(dbc.NavLink("🧦 Artículos", href="/articulos"), style ={'list-style-type': 'none', "font-weight": "bold"}),
                                             dbc.NavItem(dbc.NavLink("☎ Soporte", href="/soporte"), style ={'list-style-type': 'none', "font-weight": "bold"}),
                                             search_bar
                                         ],

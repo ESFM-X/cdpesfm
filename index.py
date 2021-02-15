@@ -55,7 +55,7 @@ def acerca():
                                         """, style = {"text-align":"justify"}
                                     ),
                                     html.P(
-                                        "Toda nuestra comunidad es bienvenida, queremos compartir las aplicaciones y proyectos que desarrollamos durante los cursos con la comunidad, así que si quieres desarrollar una aplicación o tienes alguna buena idea acércate a los integrantes del CdP ESFM y con gusto podremos ayudarte a volverla realidad.",
+                                        "¡Toda nuestra comunidad es bienvenida!",
                                         
                                     ),
                                     

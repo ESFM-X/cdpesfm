@@ -87,8 +87,16 @@ string = """
                 box-shadow:0 0 0 .2rem rgba(0,0,0,0)
             }
 
-            .modal-content{
+            .tpyt{
                 background:linear-gradient(0deg,#589db4 , #644598)!important;
+                color: white;
+            }
+            .ting{
+                background:linear-gradient(0deg,#633a93 , #c33c4b)!important;
+                color: white;
+            }
+            .tmat{
+                background:linear-gradient(0deg,#644598 , #589db4)!important;
                 color: white;
             }
 

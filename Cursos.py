@@ -162,9 +162,10 @@ def cursos():
             [
                 dbc.Card(card_content_1, color="primary", inverse=True),
                 #dbc.Card(card_content_2, body=True),
-                dbc.Card(card_content_3, color="dark", inverse=True),
+                
                 dbc.Card(card_content_6, color="warning", inverse=True),
                 dbc.Card(card_content_5, className= "cripto", inverse=True),
+                dbc.Card(card_content_3, color="dark", inverse=True),
                 dbc.Card(card_content_4, color="info", inverse=True),
                 #dbc.Card(card_content_7, color="success", inverse=True),
                 dbc.Card(card_content_8, color="success", inverse=True),
@@ -191,12 +192,66 @@ def cursos():
                                                                         html.Li("Programación dinámica"),
                                                                         html.Li("Programación orientada a objetos"),           
                                                                     ])
-                                ]),
+                                ],
+                            className = "tpyt"),
                                 dbc.ModalFooter(
-                                    dbc.Button("Close", id="close-py", color = "danger")
+                                    dbc.Button("Cerrar", id="close-py", color = "danger")
                                 ),
                             ],
                             id="modal-py",
+                            size="lg",
+                            centered = True
+                        ),
+                dbc.Modal(
+                            [
+                                dbc.ModalHeader("Ingeniería de Datos"),
+                                dbc.ModalBody([
+                                    html.P("Temario: "),
+                                    html.Ul(
+                                                                    [
+                                                                        html.Li("Repaso de Python"),
+                                                                        html.Li("Introdución a la ciencia de datos"),
+                                                                        html.Li("Roles de la ciencia de datos"),
+                                                                        html.Li("Jupyter Notebooks"),
+                                                                        html.Li("Procesos ETL"),
+                                                                        html.Li("Web Scraping"),
+                                                                        html.Li("Introducción a Pandas"),
+                                                                        html.Li("Implementación de Pipelines"),
+                                                                        html.Li("Bases de datos"),
+                                                                        html.Li("Cómputo en la nube"),
+                                                                        html.Li("Creación de dashboards"),       
+                                                                    ])
+                                ],
+                            className = "ting"),
+                                dbc.ModalFooter(
+                                    dbc.Button("Cerrar", id="close-ing", color = "danger")
+                                ),
+                            ],
+                            id="modal-ing",
+                            size="lg",
+                            centered = True
+                        ),
+                dbc.Modal(
+                            [
+                                dbc.ModalHeader("MATLAB"),
+                                dbc.ModalBody([
+                                    html.P("Temario: "),
+                                    html.Ul(
+                                                                    [
+                                                                        html.Li("Operaciones con datos y variables"),
+                                                                        html.Li("Vectores y matrices"),
+                                                                        html.Li("Estructura de programación en Matlab"),
+                                                                        html.Li("Gráficos en 2D y 3D"),
+                                                                        html.Li("Operaciones con polinomios y ecuaciones"),
+                                                                            
+                                                                    ])
+                                ],
+                            className = "tmat"),
+                                dbc.ModalFooter(
+                                    dbc.Button("Cerrar", id="close-mat", color = "danger")
+                                ),
+                            ],
+                            id="modal-mat",
                             size="lg",
                             centered = True
                         ),

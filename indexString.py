@@ -10,7 +10,11 @@ string = """
             body {
                 margin: 0px;
                 
+                
                 }
+            a{
+                text-decoration:none;
+            }
             button{
                 color: #ffffff;
                 }
@@ -100,6 +104,40 @@ string = """
                 color: white;
             }
 
+
+            .btn-outline-success{
+                color:#28a745;
+                border-color:#28a745
+            }
+            .btn-outline-success:hover{
+                color:#fff;
+                background-color:#28a745;
+                border-color:#28a745}
+            .btn-outline-success.focus,.btn-outline-success:focus{
+                box-shadow:0 0 0 .2rem rgba(40,167,69,.5)
+            }
+            .btn-outline-success.disabled,.btn-outline-success:disabled{
+                color:#28a745;
+                background-color:transparent
+            }
+            .btn-outline-success:not(:disabled):not(.disabled).active,.btn-outline-success:not(:disabled):not(.disabled):active,.show>.btn-outline-success.dropdown-toggle{
+                color:#fff;
+                background-color:#28a745;
+                border-color:#28a745
+            }
+            .btn-outline-success:not(:disabled):not(.disabled).active:focus,.btn-outline-success:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-success.dropdown-toggle:focus{
+                box-shadow:0 0 0 .2rem rgba(40,167,69,.5)
+            }
+            .custom-control-input:checked~.custom-control-label::before {
+                background-color:#7b1448!important;
+                border-color: #7b1448!important;
+            }
+            .custom-control-input:focus~.custom-control-label::before{
+                box-shadow:0 0 0 .2rem #7b1448;
+            }
+            .custom-control-label:hover{
+                cursor:pointer;
+            }
         </style>
     </head>
     <body style = "margin: 0!important;" >

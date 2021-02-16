@@ -102,12 +102,12 @@ def cursos():
             ),
         ]
         card_content_8 = [
-            dbc.CardImg(src="https://fotos.subefotos.com/760b618f4b3c2711ead40fa40f15e632o.png", top=True),
+            dbc.CardImg(src="https://fotos.subefotos.com/667724ccdf09cd068f0263e231b4b6bdo.png", top=True),
             dbc.CardBody(
                 [
-                    html.H5("LaTex", className="card-title"),
+                    html.H5("Wolfram Mathematica", className="card-title"),
                     html.P(
-                        "Deja de utilizar Word o cualquier otro editor de texto simplista y aprende a dar formato a tus ecuaciones y documentos científicos en LaTex.",
+                        "Deja de utilizar Word o cualquier otro editor de texto simplista y aprende a dar formato a tus ecuaciones y documentos científicos en Mathematica. También aprendarás su sintaxis y a programar",
                         className="card-text",
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tlat"),

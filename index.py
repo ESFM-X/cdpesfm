@@ -27,7 +27,7 @@ def acerca():
 
                     """, style = {"text-align":"justify"}
                 ),
-                html.P(html.A(dbc.Button("Unéte a Discord", color="primary"), href = "https://discord.gg/JxS59BFBu3",target="_blank" ), className="lead"),
+                html.P(html.A(dbc.Button("Únete a Discord", color="primary"), href = "https://discord.gg/JxS59BFBu3",target="_blank" ), className="lead"),
             ], style = {"padding-left":0})
         ], style = {"padding":20, "background-color":"#343a40", "color":"#CBCBCB"}
     ),
@@ -59,11 +59,11 @@ def acerca():
                                         
                                     ),
                                     
-                                ], width= 8
+                                ], md= 8
                         ),
                         dbc.Col([
                                 html.Img(src="https://fotos.subefotos.com/4b27caae6fb7c29b8551f171d5195ecbo.png", style = {"width":"100%","margin-left":"auto" }) 
-                        ]
+                        ], md = 4
 
                         )
                     ], form = True
@@ -71,7 +71,7 @@ def acerca():
                 
                 
                 #html.P(html.A(dbc.Button("Unéte a Discord", color="primary"), href = "https://discord.gg/JxS59BFBu3",target="_blank" ), className="lead"),
-            ], style = {"padding-left":20})
+            ], style = {"padding-left":5})
         ], style = {"padding":20, "background-color":"white", "color":"#3F3F3F", "margin-bottom":0}
     ),
     dbc.Jumbotron(
@@ -85,8 +85,9 @@ def acerca():
                 html.Hr(className="my-2"),
                 dbc.Row([
                             dbc.Col([
-                                html.Img(src="https://fotos.subefotos.com/98e19371bee1fc70e3a4cef70db67df1o.jpg", style = {"width":"100%","margin-left":"auto" }) 
-                            ]),
+                                html.Img(src="https://fotos.subefotos.com/98e19371bee1fc70e3a4cef70db67df1o.jpg", style = {"width":"100%","margin-left":"auto", "padding-bottom":30 }),
+                                
+                            ],md=4 ),
                             dbc.Col([
                                 html.P(
                                     "Todos los cursos se imparten en Discord, tecnología que la podrás utilizar desde tu navegador sin la necesidad de descargar algo. "
@@ -98,11 +99,11 @@ def acerca():
                                     "permitiéndote enriquecer tus conocimientos y no quedarte sólo con el temario de los cursos. " ,
                                     style ={"text-align":"justify", "text-justify": "inter-word"}
                                 ),
-                            ], width = 7, style = {"text-align":"justify"}),
+                            ], md=8, style = {"text-align":"justify"}),
                             
                         ])
                 #html.P(html.A(dbc.Button("Unéte a Discord", color="primary"), href = "https://discord.gg/JxS59BFBu3",target="_blank" ), className="lead"),
-            ], style = {"padding-right":20})
+            ], style = {"padding-right":5})
         ], style = {"padding":20, "background-color":"#F6F6F6", "color":"#3F3F3F"}
     ),
     dbc.Jumbotron(
@@ -118,7 +119,7 @@ def acerca():
                     "En cada curso tenemos estudiantes que muestran su compromiso y pasión desde la primera sesión, el CdP ESFM los reconoce presentándolos a continuación. " 
                 ),
                 #html.P(html.A(dbc.Button("Unéte a Discord", color="primary"), href = "https://discord.gg/JxS59BFBu3",target="_blank" ), className="lead"),
-            ], style = {"padding-left":20, "text-justify": "inter-word"})
+            ], style = {"padding-left":5, "text-justify": "inter-word"})
         ], style = {"padding":20, "background-color":"white", "color":"#3F3F3F"}
     ),
     

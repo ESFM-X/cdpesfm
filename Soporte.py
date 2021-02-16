@@ -82,7 +82,7 @@ def soporte():
     return [html.Div([
                                         html.H1("Soporte", className="display-3" , style ={"font-size":"3rem"} ),
                                         html.P(
-                                            "¿Tienes algún problema con tu registro o algo que contarnos? ",
+                                            "¿Tienes algún problema con tu registro o quieres ponerte en contácto con nosotros? ",
                                             className="lead",
                                         ),
                                         html.P(

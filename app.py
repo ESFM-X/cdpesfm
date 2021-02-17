@@ -303,7 +303,7 @@ def elegir_horario(curso):
 def searching(n,text):
     
     if n != None:
-        return '/search&q='+text.replace(' ','+')
+        return ['/search&q='+text.replace(' ','+')]
         
     else:
         raise dash.exceptions.PreventUpdate()

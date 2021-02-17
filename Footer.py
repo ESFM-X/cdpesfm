@@ -8,11 +8,15 @@ def footer():
                                     html.Div(
                                         [
                                             html.Img(src="https://fotos.subefotos.com/8d86f83446ffc85b28747e51e666f4b5o.png", height = 50, style = {"margin":5}),
-                                             html.Img(src="https://fotos.subefotos.com/076df224d0bb0b75749aa140d0c955afo.png", height = 50, style = {"margin":5}),
+                                            html.Img(src="https://fotos.subefotos.com/076df224d0bb0b75749aa140d0c955afo.png", height = 50, style = {"margin":5}),
                                             html.Img(src="https://fotos.subefotos.com/d832491f73b5c1db1fa9d6d704177fcao.png", height = 40, style = {"margin":5}),
-                                           
+                                            html.Div([
+                                                html.A('Facebook   ', href = '#', style = {'color':'#3b5998', 'text-align':'center'}),    #,target='_blank'
+                                                html.A('   Instagram', href = '#', style = {'padding-left':10,'color':'#C13584', 'text-align':'center'}),    #,target='_blank'
+                                                html.A('   Discord', href = 'https://discord.com/invite/JxS59BFBu3',target='_blank', style = {'padding-left':10,'color':'#7289da', 'text-align':'center'})    
+                                            ], style = {"padding-left":27})
                                         ],
-                                        style = {"margin-left":"auto","margin-right":"auto", "width":282, "padding-bottom":30}
+                                        style = {"margin-left":"auto","margin-right":"auto", "width":282, "padding-bottom":10}
                                     ),
                                     dbc.Row(
                                         [
@@ -29,11 +33,7 @@ def footer():
                                             
                                             html.P('Av. Instituto Politécnico Nacional s/n Edificio 9 Unidad Profesional “Adolfo López Mateos” Col. San Pedro Zacatenco, Del. Gustavo A. Madero, Ciudad de México C.P. 07738, Ciudad de México; México 2009-2013. Conmutador 01 (55) 5729 6000, ext. 55343',
                                                     style = {"text-align":"justify"}),
-                                            html.A('Facebook   ', href = '#', style = {'color':'#3b5998', 'text-align':'center'}),    #,target='_blank'
-                                            #html.P('-',style = {'color':'white'}),
-                                            html.A('   Instagram', href = '#', style = {'padding-left':10,'color':'#C13584', 'text-align':'center'}),    #,target='_blank'
-                                            html.A('   Discord', href = 'https://discord.com/invite/JxS59BFBu3',target='_blank', style = {'padding-left':10,'color':'#7289da', 'text-align':'center'})    
-                                        
+                                            
                                             ], style = {'color':'black'}),
 
                                             #dbc.Col(html.Img(src = 'https://fotos.subefotos.com/a451cf35b3875a515c3ec89042922cebo.png', style = {'width':'100%', 'padding-bottom':10,'margin-left':'auto','margin-right':'auto'})),

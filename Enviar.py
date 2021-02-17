@@ -85,7 +85,7 @@ def send_email_test(to,ide, curso):
             message.add_alternative(f"""
                         <!DOCYPE html>
                         <html>
-                            <body style = "text-align: center;background-color: #061d47; color: #ffffff; font-family: Open Sans, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;">
+                            <body style = "text-align: center;background-color: #343a40; color: #ffffff; font-family: Open Sans, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;">
                                 <div style = "padding-top: 20px;padding-bottom:200px;margin-top:20px">
                                     <img src = "https://fotos.subefotos.com/1ea5493402c85218b1af851e3e8deaa5o.png" style="width: 70%;margin-top:10px;margin-left:auto;margin-right:auto;display:block"/>
                                     <h4>¡Tu test con ID {ide} ha sido enviado con éxito!</h4>
@@ -104,7 +104,7 @@ def send_email_test(to,ide, curso):
 
 def send_email(to,name,ide,curso):
     name = ''.join(word.capitalize() + ' ' for word in name.lower().split(' '))
-    discord_tutorial = 'https://drive.google.com/file/d/1EGl8DYvPgQIhrjishLiqkbG0iG0KDCWF/view'
+    discord_tutorial = 'https://drive.google.com/file/d/1viSvFf8Vsq7yxMr2WQHdhqDKBKg2rc9z/view?usp=sharing'
     if curso == 'Python-zh':
         link = 'https://discord.gg/mxBQnEV'
         curso = 'Python from zero to hero'
@@ -134,8 +134,9 @@ def send_email(to,name,ide,curso):
                             """
             elif curso == 'Ingeniería de datos' or curso == 'Pandas para ciencia de datos':
                 body = "Hola {}, bienvenido(a) al Club de Programación ESFM. \n\n Tu ID de registro es: {} \n\n ¡Nos alegra que te intereses en nuestro curso {}! Te enviamos el link de la plataforma que ocuparemos para las sesiones: \n {} .\n Si no estás familiarizado con Discord, te adjuntamos una guía que preparamos:\n {}\n\n Si no has hecho el Test, no pierdas tu lugar y accede al siguiente enlace para realizarlo (sólo lo tienes que hacer una vez): \n https://cdpesfm.college/test?id={}&name={}".format(name,ide,curso,link,discord_tutorial,encrypt(ide),encrypt(name))
-                test = f"""<p> Si no has hecho el Test, no pierdas tu lugar y accede al siguiente enlace para realizarlo (sólo lo tienes que hacer una vez):<p>
-                            <a href = "https://cdpesfm.college/test?id={encrypt(ide)}&name={encrypt(name)}" style="color: #f9a836;">Hacer Test</a>"""
+                #test = f"""<p> Si no has hecho el Test, no pierdas tu lugar y accede al siguiente enlace para realizarlo (sólo lo tienes que hacer una vez):<p>
+                #            <a href = "https://cdpesfm.college/test?id={encrypt(ide)}&name={encrypt(name)}" style="color: #f9a836;">Hacer Test</a>"""
+                test = ''
                 discord = f"""       <p>Nos alegra que te intereses en nuestro curso {curso}. Te enviamos el link de la plataforma que ocuparemos para las sesiones: <a href = "{link}" style="color: #f9a836;">Discord</a>.  </p>
                                     <p> Si no estás familiarizado con Discord, te adjuntamos una guía que preparamos: <a href = "{discord_tutorial}" style="color: #f9a836;">Tutorial Discord</a>.  </p>
                                     <br></br>"""
@@ -155,9 +156,9 @@ def send_email(to,name,ide,curso):
             message.add_alternative(f"""
                         <!DOCYPE html>
                         <html>
-                            <body style = "text-align: center;background-color: #061d47; color: #ffffff; font-family: Open Sans, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;">
-                                <div style = "padding-top: 20px;padding-bottom:200px;margin-top:20px">
-                                    <img src = "https://fotos.subefotos.com/1ea5493402c85218b1af851e3e8deaa5o.png" style="width: 70%;margin-top:10px;margin-left:auto;margin-right:auto;display:block"/>
+                            <body style = "text-align: center;background-color: #343a40; color: #ffffff; font-family: Open Sans, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;">
+                                <div style = "padding-top: 20px;padding-bottom:200px;margin-top:20px;margin-left:10;margin-right:10;">
+                                    <img src = "https://fotos.subefotos.com/a99ab1de3a4c1d7b7060458d2fc6e9a7o.png" style="width: 70%;margin-top:10px;margin-left:auto;margin-right:auto;display:block"/>
                                     <br></br>
                                     <h4>¡Hola {name}, bienvenido(a) al Club de Programación ESFM!</h4>
                                     <h4 style ="color:#f9a836;">Tu ID de registro es: {ide} </h4>

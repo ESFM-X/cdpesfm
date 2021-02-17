@@ -138,6 +138,24 @@ string = """
             .custom-control-label:hover{
                 cursor:pointer;
             }
+            .rc-slider-track{
+                background-color:#7b1448!important;
+            }
+            .rc-slider-dot-active {
+                border-color: #7b1448!important;
+            }
+            .rc-slider-handle{
+                border: solid 2px #7b1448;
+            }
+            .rc-slider-handle:hover{
+                border: solid 2px #7b1448;
+            }
+            .rc-slider-handle-click-focused{
+                border-color: #7b1448!important;
+            }
+            .is-focused,.is-pseudo-focused{
+                border-color: #7b1448!important;
+            }
         </style>
     </head>
     <body style = "margin: 0!important;" >

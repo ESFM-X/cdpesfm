@@ -81,7 +81,7 @@ def display_page(pathname, url):
     elif pathname == '/convocatoria':
         return [[Header.header()] +Convocatoria.convocatoria2()+ Footer.footer()]
     else:#if pathname == '/proyectos':
-        return [[Header.header()] + Footer.footer()]
+        return [[Header.header()] + index.acerca() + Footer.footer()]
 
 @app.callback(
     Output("navbar-collapse", "is_open"),
@@ -167,70 +167,79 @@ def borrar_datos(mensaje):
     else:
         raise dash.exceptions.PreventUpdate()
 #########################################################################################
-@app.callback([Output('Confirmacion', 'children'), Output('Confirmacion','style'), Output('objetivo','value')],
+@app.callback([Output('Confirmacion', 'children'), Output('Confirmacion','style')],# Output('objetivo','value')],
               [Input('go', 'n_clicks'), Input('session-stored2','data')],
                 [State('name', 'value'),State('boleta', 'value'),State('correo', 'value'),State('carrera', 'value'),State('semestre', 'value'),State('curso', 'value'),State('objetivo', 'value'),State('Accepted','value'),
                 State('disponibilidad','value')],
             )
 def enviar(n_clicks,data,*args,**kwargs):
-    #print(data[-1], list(args[:-1]))
-    global intento
-    #print(args[8], type(args[8]), args)
-    for dat in data[:-1]:
-        if dat == list(args[:-1]) and dat[0] != '':
-            intento = 0
-            return [f'Formulario ya enviado',{'color':'#db0000', 'padding':10},args[6]]
-    if args[5] == 'Ingenieria-datos' or args[5] == 'Pandas-ciencia':
-        if args[7]!= ['Accepted']:
-            intento = 0
-            #print(args[7])
-            return ['Es indispensable saber Python para inscribir ese curso. Te recomendamos tomar el curso de Python from zero to hero.',{'color':'#7b1448', 'padding':10},args[6]+' ']
-    if  len(list(args)[0]) != 0 and args[1] != '' and len(list(args)[2]) != 0  and len(list(args)[3]) != 0 and len(list(args)[5]) != 0 and len(list(args)[6]) != 0 and args[8] !=[''] and args[8] != None: 
-        curso_tomado =  confirmar_correo(args[2], args[1])
-        if curso_tomado:
-            return [f'Ya estás inscrito al curso de {curso_tomado}',{'color':'#7b1448', 'padding':10},args[6]]
-        else:
-            id_registro = args[5][0:2].lower() + get_random_string(5)
-            #print('ENVIADOS: ',list(args))
-            doc_ref = db.collection(args[5]).document(id_registro)
-            hora = datetime.datetime.now()
-            hora = str(hora.day) + '-' + str(hora.month) + '-' + str(hora.year) + ' ' + str(hora.hour) + ':' + str(hora.minute) + ':' + str(hora.second)
-            doc_ref.set({
-                u'Nombre': args[0],
-                u'Boleta': args[1],
-                u'Correo': args[2],
-                u'Carrera': args[3],
-                u'Semestre': args[4],
-                u'Curso': args[5],
-                u'Objetivo': args[6],
-                u'Horario': args[8],
-                u'Hora': hora,
-                u'Id': id_registro
-            })
-            doc_ref = db.collection('Id-correo').document(id_registro)
-            doc_ref.set({u'Correo':args[2], u'Id':id_registro,u'Curso':args[5],u'Boleta':args[1]})
-            intento = Enviar.send_email(args[2],args[0],id_registro,args[5])
-            if intento == 1:
-                return [f'¡Registro concluido con éxito!    ID: {id_registro}. \n Te hemos enviado un correo (revisa en Spam).',{'color':'#39A051', 'font-size':'1.2em', 'padding':10},args[6]]
-            elif intento == 0:
-                doc_ref = db.collection('Errors-email').document(id_registro)
-                doc_ref.set({u'Correo':args[2],u'Curso': args[5]})
-                return [f'Formulario enviado con éxito, pero no fue posible enviarte un correo. Ponte en contacto a soporte@cdpesfm.college con tu ID: {id_registro}.',{'color':'#db0000', 'padding':10},args[6]]
-    elif n_clicks >= 1:
-        intento = 0
-        return ['Tienes que llenar todos los campos',{'color':'#7b1448', 'padding':10},args[6]+' ']
-    else:
-        intento = 0
-        return ['',{'color':'#db0000', 'padding':10},args[6]]   
 
-@app.callback([Output('name', 'value'),Output('boleta', 'value'),Output('correo', 'value'),Output('carrera', 'value'),Output('semestre', 'value'),Output('curso', 'value')],#,Output('objetivo', 'value')],
-                [Input('go', 'n_clicks')],
-                [State('go', 'n_clicks')])
-def borrar(n_clicks,n):
-    if n_clicks >= 1:
-        return ['','','','',1,'']#,'']
+    #print(data[-1], list(args[:-1]))
+    ####global intento
+    #print(args[8], type(args[8]), args)
+    if n_clicks:
+        for dat in data[:-1]:
+            if dat == list(args[:-1]) and dat[0] != '':
+                intento = 0
+                return [f'Formulario ya enviado',{'color':'#db0000', 'padding':10}]#,args[6]]
+        if args[5] == 'Ingenieria-datos' or args[5] == 'Pandas-ciencia':
+            if args[7]!= ['Accepted']:
+                intento = 0
+                #print(args[7])
+                return ['Es indispensable saber Python para inscribir ese curso. Te recomendamos tomar el curso de Python from zero to hero.',{'color':'#7b1448', 'padding':10},args[6]+' ']
+        if  len(list(args)[0]) != 0 and args[1] != '' and len(list(args)[2]) != 0  and len(list(args)[3]) != 0 and len(list(args)[5]) != 0 and len(list(args)[6]) != 0 and args[8] !=[''] and args[8] != None: 
+            curso_tomado =  confirmar_correo(args[2], args[1])
+            if curso_tomado:
+                return [f'Ya estás inscrito al curso de {curso_tomado}',{'color':'#7b1448', 'padding':10}]#,args[6]]
+            else:
+                id_registro = args[5][0:2].lower() + get_random_string(5)
+                #print('ENVIADOS: ',list(args))
+                doc_ref = db.collection(args[5]).document(id_registro)
+                hora = datetime.datetime.now()
+                hora = str(hora.day) + '-' + str(hora.month) + '-' + str(hora.year) + ' ' + str(hora.hour) + ':' + str(hora.minute) + ':' + str(hora.second)
+                doc_ref.set({
+                    u'Nombre': args[0],
+                    u'Boleta': args[1],
+                    u'Correo': args[2],
+                    u'Carrera': args[3],
+                    u'Semestre': args[4],
+                    u'Curso': args[5],
+                    u'Objetivo': args[6],
+                    u'Horario': args[8],
+                    u'Hora': hora,
+                    u'Id': id_registro
+                })
+                doc_ref = db.collection('Id-correo').document(id_registro)
+                doc_ref.set({u'Correo':args[2], u'Id':id_registro,u'Curso':args[5],u'Boleta':args[1]})
+                intento = Enviar.send_email(args[2],args[0],id_registro,args[5])
+                if intento == 1:
+                    return [f'¡Registro concluido con éxito!    ID: {id_registro}. \n Te hemos enviado un correo (revisa en Spam).',{'color':'#39A051', 'font-size':'1.2em', 'padding':10}]#,args[6]]
+                elif intento == 0:
+                    doc_ref = db.collection('Errors-email').document(id_registro)
+                    doc_ref.set({u'Correo':args[2],u'Curso': args[5]})
+                    return [f'Formulario enviado con éxito, pero no fue posible enviarte un correo. Ponte en contacto a soporte@cdpesfm.college con tu ID: {id_registro}.',{'color':'#db0000', 'padding':10}]#,args[6]]
+        elif n_clicks >= 1:
+            intento = 0
+            return ['Tienes que llenar todos los campos',{'color':'#7b1448', 'padding':10}]#,args[6]+' ']
+        else:
+            intento = 0
+            return ['',{'color':'#db0000', 'padding':10}]#,args[6]]
     else:
-        return ['','','','',1,'']#,'']
+        raise dash.exceptions.PreventUpdate()
+
+@app.callback([Output('name', 'value'),Output('boleta', 'value'),Output('correo', 'value'),Output('carrera', 'value'),Output('semestre', 'value'),Output('curso', 'value'), Output('objetivo','value')],#,Output('objetivo', 'value')],
+                [Input('Confirmacion', 'children')])
+               # [State('Confirmacion', 'children')])
+def borrar(mensaje):
+    #print(mensaje)
+    mensaje = mensaje if type(mensaje) == str else ''
+    if 'Ya estás inscrito al curso de' in mensaje or '¡Registro concluido con éxito!' in mensaje or 'Formulario enviado con éxito,' in mensaje: 
+       # if n_clicks >= 1:
+            return ['','','','',1,'','']#,'']
+       # else:
+        #    return ['','','','',1,'']#,'']
+    else:
+        raise dash.exceptions.PreventUpdate()
 
 
 
@@ -255,7 +264,7 @@ def ac_buttom(curso):
 def elegir_horario(curso):
     titulo = [html.H6('Elige tu disponibilidad de horario:')]
     if curso == '':
-        return [titulo+['Elige un curso',dbc.Checklist(id = 'disponibilidad',
+        return [titulo+[html.P('Elige un curso',style = {"color": "#8f8f8f"}),dbc.Checklist(id = 'disponibilidad',
                 #options=[{'label': '  Elige un curso', 'value': 'Lun'},],
                 value=[''])]]
 

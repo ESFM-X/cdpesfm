@@ -10,7 +10,7 @@ def cursos():
                 [
                     html.H5("Python from Zero to Hero", className="card-title"),
                     html.P(
-                        "Aprende desde cero el lenguaje con mayor crecimiento en los últimos años. Es uno de los lenguajes favoritos para adentrarse al mundo de la programación por su sintáxis. El curso te dará las herramientas necesarias para tomar los cursos de Ingeniería de datos, Introducción a Machine Learning con Python y Python from Hero to God.",
+                        "Aprende desde cero el lenguaje con mayor crecimiento en los últimos años. Ideal para adentrarse al mundo de la programación por su sintáxis. Este curso te dará las herramientas necesarias para tomar los cursos de Ingeniería de datos, Introducción a Machine Learning con Python y Python from Hero to God.",
                         className="card-text",
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tpyt"),
@@ -81,7 +81,7 @@ def cursos():
                 [
                     html.H5("Python from Hero to God", className="card-title"),
                     html.P(
-                        "Todo lo que necesitas para desarrollar los proyectos que tienes en mente lo aprenderás aquí. Olvídate de utilizar la interfaz de fondo negro con letras blancas, podrás obtener datos de tus usuarios desde una interfaz de escritorio, una página web o hasta una aplicación móvil. ",
+                        "Con este curso llegarás al siguiente nivel, en el que aprenderás cómo desarrollar todos los proyectos que tengas en mente. Podrás obtener datos de tus usuarios desde una interfaz de escritorio, una página web o hasta una aplicación móvil.",
                         className="card-text",
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tgod"),
@@ -107,7 +107,7 @@ def cursos():
                 [
                     html.H5("Wolfram Mathematica", className="card-title"),
                     html.P(
-                        "Deja de utilizar Word o cualquier otro editor de texto simplista y aprende a dar formato a tus ecuaciones y documentos científicos en Mathematica. También aprendarás su sintaxis y a programar",
+                        "Deja de utilizar Word y aprende a darle formato a tus ecuaciones y documentos científicos en Mathematica. En este curso conocerás su sintáxis y cómo programar.",
                         className="card-text",
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tlat"),

@@ -51,8 +51,8 @@ def convocatoria2():
                                         ),
                                     html.Div(
                                             children = [
-                                                html.Img (src="https://fotos.subefotos.com/ad712aaf77eaa301d9bc5016af4ddd0ao.png", 
-                                                       style = {"margin-bottom":0,'min-width':350,"display":"block","width": '100%', "height": "auto", "margin-left": "auto", "margin-right": "auto", "margin-top": 30,"text-align":"center"})
+                                                html.Img (src="https://fotos.subefotos.com/b8055f292fdcc96840cc8cc172f6ab94o.png", 
+                                                       style = {"margin-bottom":0,'min-width':450,"display":"block","width": '70%', "height": "auto", "margin-left": "auto", "margin-right": "auto", "margin-top": 30,"text-align":"center"})
                                             ] 
                                         ),
                                         html.Div(
@@ -106,7 +106,7 @@ def convocatoria2():
                                                     ),
                                                     html.P('Selecciona el número de semestres que has cursado.', style = {'color':color_footer,'margin-top':10}),
                                                     
-                                                    html.H6('Elige curso a inscribir:', style = {'margin-top':margen,'color':color_letra}),
+                                                    html.H6('Elige el curso a inscribir:', style = {'margin-top':margen,'color':color_letra}),
                                                     dcc.Dropdown(id = 'curso',
                                                         options=[
                                                             {'label': 'Python from zero to hero', 'value': 'Python-zh'},
@@ -155,7 +155,7 @@ def convocatoria2():
                                         ],style = {'margin-left':'auto','margin-right':'auto', 'text-align': 'center', 'margin-top':20}),
                                         html.Div(children = [ 
                                                     dcc.Link( id = 'go_link', children = [
-                                                        dbc.Button( id='go', n_clicks=0, color="danger", className="mr-1")
+                                                        dbc.Button("Enviar", id='go', n_clicks=0, color="danger", className="mr-1")
                                                     ], href = '')
                                             ],
                                             style = {'width':'auto','margin-left':'auto','margin-right':'auto', 'text-align': 'center', 'margin-top':margen}

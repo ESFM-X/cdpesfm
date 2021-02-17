@@ -43,14 +43,12 @@ def acerca():
                     [
                         dbc.Col([
                                 html.P(
-                                        "El Club de Programación ESFM (CdP ESFM) ubicado en el Aula Siglo XXI del edificio 9, IPN Unidad Zacatenco, es un club en el que aprenderás a hacer computo científico y adentrarte al desarrollo de sus aplicaciones.",
+                                        """El Club de Programación ESFM (CdP ESFM), ubicado en el Aula Siglo XXI del edificio 9, IPN Unidad Zacatenco, está formado por y para alumnos de la Escuela Superior de Física y Matemáticas que comparten un interés por la programación, el análisis de datos y el cómputo científico.""",
                                         
                                     ),
                                     html.P(
                                         """
-                                            El CdP ESFM es el club formado por alumnos y para alumnos de la Escuela Superior de Física y Matemáticas que comparten el interés por la programación, el análisis de datos y el computo científico. 
-                                            Nuestro objetivo principal es que desarrolles la habilidad de pasar de las mates a la programación, logrando aplicaciones relevantes dentro y fuera de la comunidad.
-                                            La dinámica de nuestros cursos se basa en dar lecturas cada semana dejando actividades, retos y misiones que ayudarán a reforzar los temas.
+                                            Nuestro objetivo principal es que desarrolles la habilidad de pasar de las mates a la programación, logrando aplicaciones relevantes dentro y fuera de la comunidad. La dinámica de nuestros cursos se basa en dar lecturas didácticas cada semana y dejando actividades, retos y misiones que ayudarán a reforzar los temas.
 
                                         """, style = {"text-align":"justify"}
                                     ),
@@ -59,11 +57,11 @@ def acerca():
                                         
                                     ),
                                     
-                                ], md= 8
+                                ], md= 8#, xl = 9
                         ),
                         dbc.Col([
                                 html.Img(src="https://fotos.subefotos.com/4b27caae6fb7c29b8551f171d5195ecbo.png", style = {"width":"100%","margin-left":"auto" }) 
-                        ], md = 4
+                        ], md = 4#, xl = 3
 
                         )
                     ], form = True
@@ -90,13 +88,12 @@ def acerca():
                             ],md=4 ),
                             dbc.Col([
                                 html.P(
-                                    "Todos los cursos se imparten en Discord, tecnología que la podrás utilizar desde tu navegador sin la necesidad de descargar algo. "
-                                    "Sabemos que algunas veces es difícil o imposible entrar a alguna sesión, es por eso que  todas las sesiones serán transmitidas, permitiéndote revisarlas después. " ,
+                                    """Todas las sesiones se imparten en Discord, aplicación que podrás utilizar desde tu navegador sin necesidad de descarga. En caso de que no puedas asistir a alguna clase, esta será transtimida permitiéndote revisarla después. 
+                                        """, 
                                     style ={"text-align":"justify", "text-justify": "inter-word"}
                                 ),
                                 html.P(
-                                    "En Discord también podrás hablar y preguntar tus dudas con personas que terminaron las entregas del curso pasadas, "
-                                    "permitiéndote enriquecer tus conocimientos y no quedarte sólo con el temario de los cursos. " ,
+                                    "Además, con esta plataforma podrás relacionarte con personas que puedan ayudarte a enriquecer tus conocimientos y que compartan el mismo interés en aprender. ",
                                     style ={"text-align":"justify", "text-justify": "inter-word"}
                                 ),
                             ], md=8, style = {"text-align":"justify"}),

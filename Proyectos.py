@@ -7,7 +7,7 @@ def proyectos():
     proyectos = ["Horarios de ESFM", "Automatización de limpieza de archivos locales", "Tracker de productos en tiendas online"]
     descripciones = [
                     html.P(["Creamos una tecnología que te permite visualizar y ordenar tu horario, la puedes encontrar dando click ", html.A("aquí", href = "https://horarioesfm.herokuapp.com",target='_blank',), "."]),
-                    html.P(["En el curso de Python from Zero to Hero realizamos el proyecto final de un indexador de archivos mediante su extensión. Si tienes una carpeta con muchos archivos, corre nuestro código y se crearán carpetas con la extensión diferente de tus archivos, moviéndolos a su respectiva carpeta. Puedes encontrarlo en nuestro ", html.A("Github", href = "https://github.com/JoulesCH",target='_blank'),"."]),
+                    html.P(["El proyecto final de  Python from Zero to Hero fue un indexador de archivos mediante su extensión. Si tienes una carpeta con muchos archivos desordenados, corre nuestro código y este creará carpetas en las que organizará tus documentos segú su extensión. Puedes encontrarlo en nuestro ", html.A("Github", href = "https://github.com/JoulesCH",target='_blank'),"."]),
                     html.P(["Haciendo cómputo en la nube desde los servidores de Amazon Web Services pusimos en marcha un trackeador de precios de productos que deseemos comprar. Aún se sigue trabajando para volverlo plataforma, muy pronto podrás acceder y encontrar la mejor oferta. "])
                    
                    

@@ -71,7 +71,7 @@ def soporte():
         [
             dbc.Label("Comentario", html_for="example-password-row", width=4, style = {'text-align':'right'}),
             dbc.Col(
-                dbc.Textarea(className="mb-3", placeholder="Agrega más detalle a tu solicitud de contácto", id = 'comentario'),
+                dbc.Textarea(className="mb-3", placeholder="Agrega más detalle a tu solicitud de contacto", id = 'comentario'),
 
                 width=7,
             ),
@@ -82,7 +82,7 @@ def soporte():
     return [html.Div([
                                         html.H1("Soporte", className="display-3" , style ={"font-size":"3rem"} ),
                                         html.P(
-                                            "¿Tienes algún problema con tu registro o quieres ponerte en contácto con nosotros? ",
+                                            "¿Tienes algún problema con tu registro o quieres ponerte en contacto con nosotros? ",
                                             className="lead",
                                         ),
                                         html.P(

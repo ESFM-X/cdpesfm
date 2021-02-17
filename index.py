@@ -22,7 +22,7 @@ def acerca():
                 html.P(
                     """
                         Una de nuestras intenciones es crear una comunidad en la que todos se sientan libres de compartir sus experiencias y hacer relaciones nuevas en tiempos de cuarentena,
-                        a continuación te proporcionamos la dirección al servidor de Discord, en donde podrás encontrar material de cursos pasados, hacer reseñas de profesores, ver peliculas 
+                        a continuación te proporcionamos la dirección al servidor de Discord, en donde podrás encontrar material de cursos pasados, hacer reseñas de profesores, ver películas 
                         en llamada con la comunidad y hasta conocer jugadores de tu videojuego favorito. 
 
                     """, style = {"text-align":"justify"}

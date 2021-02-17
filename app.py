@@ -10,7 +10,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-import indexString, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar
+import indexString, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar, Search
 
 cred = credentials.Certificate("formularioesfm-firebase-adminsdk-f9csg-da5faa24f2.json")
 firebase_admin.initialize_app(cred,{'projectId': 'formularioesfm'},'pagina')#,{'projectId': 'formularioesfm'},'pagina')
@@ -80,6 +80,8 @@ def display_page(pathname, url):
         return [[Header.header()] +Soporte.soporte()+ Footer.footer()]
     elif pathname == '/convocatoria':
         return [[Header.header()] +Convocatoria.convocatoria2()+ Footer.footer()]
+    elif pathname[0:7] == '/search':
+        return [[Header.header()] + [Search.page] + Footer.footer()]
     else:#if pathname == '/proyectos':
         return [[Header.header()] + index.acerca() + Footer.footer()]
 
@@ -186,7 +188,7 @@ def enviar(n_clicks,data,*args,**kwargs):
             if args[7]!= ['Accepted']:
                 intento = 0
                 #print(args[7])
-                return ['Es indispensable saber Python para inscribir ese curso. Te recomendamos tomar el curso de Python from zero to hero.',{'color':'#7b1448', 'padding':10},args[6]+' ']
+                return ['Es indispensable saber Python para inscribir ese curso. Te recomendamos tomar el curso de Python from zero to hero.',{'color':'#7b1448', 'padding':10}]#,args[6]+' ']
         if  len(list(args)[0]) != 0 and args[1] != '' and len(list(args)[2]) != 0  and len(list(args)[3]) != 0 and len(list(args)[5]) != 0 and len(list(args)[6]) != 0 and args[8] !=[''] and args[8] != None: 
             curso_tomado =  confirmar_correo(args[2], args[1])
             if curso_tomado:
@@ -292,6 +294,35 @@ def elegir_horario(curso):
                             {'label': '  Mar 14:30 - 15:30', 'value': 'Mar'},
                         ],value=[''])]]
     
+
+@app.callback(
+    [ Output('url','pathname')],
+    [Input('search','n_clicks')],
+    [State('search_input','value')]
+)
+def searching(n,text):
+    
+    if n != None:
+        return '/search&q='+text.replace(' ','+')
+        
+    else:
+        raise dash.exceptions.PreventUpdate()
+
+@app.callback(
+    [Output('busqueda_p','children'), Output('search_input','value')],
+    [Input('search','n_clicks')],
+    [State('url','pathname')]
+)
+def search_title(n,text):
+    
+    if '/search' in text:
+        #print(text, "dsadssd")
+        try:
+            return [['Resultados de la búsqueda para ', html.P(text[10:].replace('+',' '), style = {"font-weight":"bold", "display":"inline"})],text[10:].replace('+',' ')]
+        except:
+            return ['Introduce un término y luego realiza la búsqueda'],''
+    else:
+        raise dash.exceptions.PreventUpdate()
 
 if __name__ == '__main__':
     #print(dbc.themes.BOOTSTRAP)

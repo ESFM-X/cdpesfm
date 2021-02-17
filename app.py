@@ -96,8 +96,9 @@ def toggle_navbar_collapse(n, is_open):
     return is_open
 @app.callback(Output("logo","src"),[Input('url', 'pathname')])
 def actualizar_logo(url):
-    time.sleep(1.45)
-    return "https://fotos.subefotos.com/1416b6c9b4064c3979cc500bc069885co.png"
+    #print('Entraste')
+    #time.sleep(1.45)
+    return "https://cdn.discordapp.com/attachments/798047392405913601/811435939284254740/CdP_ESFM.gif"
 
 def toggle_modal(n1, n2, is_open):
     if n1 or n2:

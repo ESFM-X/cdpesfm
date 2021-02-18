@@ -118,11 +118,11 @@ def cursos():
                 html.Div([
                                         html.H1("Conoce todos nuestros cursos", className="display-3" , style ={"font-size":"3rem"} ),
                                         html.P(
-                                            "No es necesario tener conocimientos sobre los cursos, pero algunos sí requieren conocimientos previos. Cursos 100% gratuitos.",
+                                            "No es necesario tener conocimientos sobre los cursos, pero algunos sí requieren conocimientos previos. ",
                                             className="lead",
                                         ),
                                         html.P(
-                                            "En el CdP ESFM impartimos los siguientes cursos: ",
+                                            "En el CdP ESFM impartimos los siguientes cursos 100% gratuitos:",
                                         ),
                                         dbc.Row(
                                                 [
@@ -142,7 +142,7 @@ def cursos():
                                                     dbc.Col([
                                                             html.Ul([
                                                                         html.Li("MATLAB"),
-                                                                        html.Li("LaTex"),
+                                                                        html.Li("Wolfram Mathematica"),
                                                                         html.Li("Python from Hero to God"),
                                                                     ])
 

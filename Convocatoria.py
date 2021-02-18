@@ -57,6 +57,19 @@ def convocatoria2():
                                         ),
                                         html.Div(
                                         children =[ 
+                                                html.H6('Ingresa tu ID anterior  ', style = {'margin-top':margen,'color':color_letra}),
+                                                    #dcc.Input(id = 'name',value='', type='text', style ={'width':'auto','width': 300}, placeholder = 'Empieza por tus nombres'),
+                                                html.Div([
+                                                        dbc.Row([
+                                                        dbc.Col([
+                                                            dbc.Input(id = 'name',value='', type='text', style ={'width':'100%', 'margin-left':'auto','margin-right':'auto'}, placeholder = 'Empieza por tus nombres'),
+                                                        ], width = 9),
+                                                        dbc.Col([
+                                                            dbc.Button('Hola')
+                                                        ], width = 3)
+                                                    ]),
+                                                ], style = {'width':300, 'margin-left':'auto','margin-right':'auto'}),
+                                                    html.P('Si no has tomado cursos anteriores, déjalo en blanco.', style = {'color':color_footer,'margin-top':10}),
                                             dbc.Row([
                                                 dbc.Col([
                                                     #html.Div('Horarios sujetos a cupo, si se excede el primer horario mostrado se abrirá el otro.', style = {'font-size':'0.7em','color':color_letra}),

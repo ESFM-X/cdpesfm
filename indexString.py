@@ -3,6 +3,9 @@ string = """
 <html>
     <head>
         {%metas%}
+        <meta name="description" content= "Página oficial de Club de Programación ESFM">
+     
+        <meta name="robots" content="index, follow">
         <title>{%title%}</title>
         {%favicon%}
         {%css%}

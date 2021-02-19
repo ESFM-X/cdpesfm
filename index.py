@@ -60,7 +60,7 @@ def acerca():
                                 ], md= 8#, xl = 9
                         ),
                         dbc.Col([
-                                html.Img(src="https://fotos.subefotos.com/4b27caae6fb7c29b8551f171d5195ecbo.png", style = {"width":"100%","margin-left":"auto" }) 
+                                html.Img(src="https://fotos.subefotos.com/69f56b49685599ad2bc8377462bfeb6fo.jpg", style = {"width":"100%","margin-left":"auto" }) 
                         ], md = 4#, xl = 3
 
                         )
@@ -126,12 +126,12 @@ def acerca():
                                     html.H4("Juan F. Martínez ", className="card-title"),
                                     html.H6("Python from Zero to Hero", className="card-subtitle"),
                                     html.P(
-                                        "Su gran pasión por la programación lo impulso a terminar el curso de manera sobresaliente. ",
+                                    #    "Su gran pasión por la programación lo impulso a terminar el curso de manera sobresaliente. ",
                                        # "Al chile si tiene buen gusto de rolitas.",
                                         className="card-text",
                                     ),
-                                    dbc.CardLink("Github", href="#"),
-                                    dbc.CardLink("Discord", href="#"),
+                                    dbc.CardLink("Github", href="https://github.com/juantonio-martinez",target='_blank'),
+                                    dbc.CardLink("Discord", href="https://discordapp.com/users/490942535858913281",target='_blank'),
                                 ]
                             ),
                             style={"width": "100%"},
@@ -145,12 +145,12 @@ def acerca():
                                     html.H4("Sara I. López", className="card-title"),
                                     html.H6("Python from Zero to Hero", className="card-subtitle"),
                                     html.P(
-                                        "Destacada por su asistencia, investigación, compromiso y hacer un proyecto final sobresaliente usando buenas prácticas. ",
+                                    #    "Destacada por su asistencia, investigación, compromiso y hacer un proyecto final sobresaliente usando buenas prácticas. ",
                                         #Al chile si tiene buen gusto de rolitas.",
                                         className="card-text",
                                     ),
                                     #dbc.CardLink("Github", href="#"),
-                                    dbc.CardLink("Discord", href="#"),
+                                    dbc.CardLink("Discord", href="https://discordapp.com/users/762705945704136705",target='_blank'),
                                 ]
                             ),
                             style={"width": "100%"},
@@ -166,12 +166,12 @@ def acerca():
                                     html.H4("Antonio E. Vargas", className="card-title"),
                                     html.H6("Ingeniería de Datos | Pandas para Ciencia de Datos", className="card-subtitle"),
                                     html.P(
-                                        "Tuvo un gran desempeño entregando las actividades y retos logrando una asistencia perfecta. ",
+                                    #    "Tuvo un gran desempeño entregando las actividades y retos logrando una asistencia perfecta. ",
                                         
                                         className="card-text",
                                     ),
-                                    dbc.CardLink("Github", href="#"),
-                                    dbc.CardLink("Discord", href="#"),
+                                    #dbc.CardLink("Github", href="#"),
+                                    dbc.CardLink("Discord", href="https://discordapp.com/users/761436083392610335",target='_blank'),
                                 ]
                             ),
                             style={"width": "100%"},
@@ -185,12 +185,12 @@ def acerca():
                                     html.H4("Miriam R. Castelán", className="card-title"),
                                     html.H6("Python from Zero to Hero", className="card-subtitle"),
                                     html.P(
-                                        "Asistió a todas las clases. ",
+                                    #    "Asistió a todas las clases. ",
                                         
                                         className="card-text",
                                     ),
-                                    dbc.CardLink("Github", href="#"),
-                                    dbc.CardLink("Discord", href="#"),
+                                   # dbc.CardLink("Github", href="#"),
+                                    dbc.CardLink("Discord", href="https://discordapp.com/users/754879239836401695",target='_blank'),
                                 ]
                             ),
                             style={"width": "100%"},
@@ -204,12 +204,12 @@ def acerca():
                                     html.H4("Rodrigo T. Castillo", className="card-title"),
                                     html.H6("Ingeniería de Datos", className="card-subtitle"),
                                     html.P(
-                                        "Asistió a todas las clases. ",
+                                     #   "Asistió a todas las clases. ",
                                         
                                         className="card-text",
                                     ),
-                                    dbc.CardLink("Github", href="#"),
-                                    dbc.CardLink("Discord", href="#"),
+                                    #dbc.CardLink("Github", href="#"),
+                                    dbc.CardLink("Discord", href="https://discordapp.com/users/756607551897862255",target='_blank'),
                                 ]
                             ),
                             style={"width": "100%"},
@@ -223,18 +223,37 @@ def acerca():
                                     html.H4("Eduardo G. Cazares", className="card-title"),
                                     html.H6("Ingeniería de Datos", className="card-subtitle"),
                                     html.P(
-                                        "Asistió a todas las clases. ",
+                                    #    "Asistió a todas las clases. ",
                                         
                                         className="card-text",
                                     ),
-                                    dbc.CardLink("Github", href="#"),
-                                    dbc.CardLink("Discord", href="#"),
+                                    dbc.CardLink("Github", href="https://github.com/Cuadernin", target = '_blank'),
+                                    dbc.CardLink("Discord", href="https://discordapp.com/users/533539803854274561",target='_blank'),
                                 ]
                             ),
                             style={"width": "100%"},
                         ),lg = 3, md = 4, style = {"padding":"10px", "padding-top":0}
                 ),
-            ],justify="center",)
+                dbc.Col(
+                    dbc.Card(
+                            dbc.CardBody(
+                                [
+                                    html.Img(src= "https://fotos.subefotos.com/a3afe547c4346dfd48e7377e50f02354o.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.H4("Eric O. Pardo", className="card-title"),
+                                    html.H6("Pandas para Ciencia de Datos   ", className="card-subtitle"),
+                                    html.P(
+                                    #    "Asistió a todas las clases. ",
+                                        
+                                        className="card-text",
+                                    ),
+                                    #dbc.CardLink("Github", href="#"),
+                                    dbc.CardLink("Discord", href="https://discordapp.com/users/756320972986122352",target='_blank'),
+                                ]
+                            ),
+                            style={"width": "100%"},
+                        ),lg = 3, md = 4, style = {"padding":"10px", "padding-top":0}
+                ),
+            ],justify="center",style = {'margin':30})
             ], style = {"padding-left":5, "text-justify": "inter-word"})
         ], style = {"padding":20, "background-color":"white", "color":"#3F3F3F"}
     ),

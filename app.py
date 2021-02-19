@@ -67,6 +67,12 @@ def confirmar_correo(correo, boleta):
     for registro in registros2:
         return registro.to_dict()['Curso']
 #Callbacks
+#@app.callback(Output('url','href'), [Input('url','pathname')], [State('url', 'href')])
+#def change_url(url, href):
+#    print(href)
+#    if str(href)[0:4] == 'http':
+#        print('*** https' + href[4:])
+#        return 'https' + href[4:]
 @app.callback([Output('layout-1','children')], [Input('url', 'pathname'), Input('url','href')])
 def display_page(pathname, url):
     
@@ -79,7 +85,7 @@ def display_page(pathname, url):
     elif pathname == '/soporte':
         return [[Header.header()] +Soporte.soporte()+ Footer.footer()]
     elif pathname == '/convocatoria':
-        return [[Header.header()] +Convocatoria.convocatoria2()+ Footer.footer()]
+        return [[Header.header()] +Convocatoria.convocatoria()+ Footer.footer()]
     elif pathname[0:7] == '/search':
         return [[Header.header()] + [Search.page] + Footer.footer()]
     else:#if pathname == '/proyectos':
@@ -122,7 +128,21 @@ app.callback(
     [Input("tmat", "n_clicks"), Input("close-mat", "n_clicks")],
     [State("modal-mat", "is_open")],
 )(toggle_modal)
-
+app.callback(
+    Output("modal-pya", "is_open"),
+    [Input("tpya", "n_clicks"), Input("close-pya", "n_clicks")],
+    [State("modal-pya", "is_open")],
+)(toggle_modal)
+app.callback(
+    Output("modal-crip", "is_open"),
+    [Input("tcrip", "n_clicks"), Input("close-crip", "n_clicks")],
+    [State("modal-crip", "is_open")],
+)(toggle_modal)
+app.callback(
+    Output("modal-wol", "is_open"),
+    [Input("twol", "n_clicks"), Input("close-wol", "n_clicks")],
+    [State("modal-wol", "is_open")],
+)(toggle_modal)
 @app.callback(
     [Output(f"collapse-{i}", "is_open") for i in range(1, 4)],
     [Input(f"group-{i}-toggle", "n_clicks") for i in range(1, 4)],

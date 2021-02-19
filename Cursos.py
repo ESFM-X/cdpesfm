@@ -68,7 +68,7 @@ def cursos():
                 [
                     html.H5("Criptografía Aplicada en C++", className="card-title"),
                     html.P(
-                        "Adéntrate a los principales algoritmos de encriptación y codificación. ",
+                        "Existen datos 'sensibles' como lo son: planes de operaciones comerciales o militares, movimientos financieros de empresas y personas, entre otras. En general nos referimos a 'información sensible' a cualquiera que en caso de caer en manos equivocadas mientras viaja por un medio inseguro (como el Internet) desencadene en un daño para la persona u organización dueño de ella; como: pérdidas de dinero, invasión de privacidad o anticipación de estrategias, etc. ",
                         className="card-text",
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tcrip"),
@@ -84,7 +84,7 @@ def cursos():
                         "Con este curso llegarás al siguiente nivel, en el que aprenderás cómo desarrollar todos los proyectos que tengas en mente. Podrás obtener datos de tus usuarios desde una interfaz de escritorio, una página web o hasta una aplicación móvil.",
                         className="card-text",
                     ),
-                    dbc.Button("Ver temario", color="danger", id = "tgod"),
+                    dbc.Button("Ver temario", color="danger", id = "tpya"),
                 ]
             ),
         ]
@@ -110,7 +110,7 @@ def cursos():
                         "Deja de utilizar Word y aprende a darle formato a tus ecuaciones y documentos científicos en Mathematica. En este curso conocerás su sintáxis y cómo programar.",
                         className="card-text",
                     ),
-                    dbc.Button("Ver temario", color="danger", id = "tlat"),
+                    dbc.Button("Ver temario", color="danger", id = "twol"),
                 ]
             ),
         ]
@@ -252,6 +252,78 @@ def cursos():
                                 ),
                             ],
                             id="modal-mat",
+                            size="lg",
+                            centered = True
+                        ),
+                dbc.Modal(
+                            [
+                                dbc.ModalHeader("Python from Hero to God"),
+                                dbc.ModalBody([
+                                    html.P("Temario en desarrollo. "),
+                                    html.Ul(
+                                                                    [
+                                                                        #html.Li("Operaciones con datos y variables"),
+                                                                        #html.Li("Vectores y matrices"),
+                                                                        #html.Li("Estructura de programación en Matlab"),
+                                                                        #html.Li("Gráficos en 2D y 3D"),
+                                                                        #html.Li("Operaciones con polinomios y ecuaciones"),
+                                                                            
+                                                                    ])
+                                ],
+                            className = "tpya"),
+                                dbc.ModalFooter(
+                                    dbc.Button("Cerrar", id="close-pya", color = "danger")
+                                ),
+                            ],
+                            id="modal-pya",
+                            size="lg",
+                            centered = True
+                        ),
+                dbc.Modal(
+                            [
+                                dbc.ModalHeader("Criptografía Aplicada en C++"),
+                                dbc.ModalBody([
+                                    html.P("Temario en desarrollo. "),
+                                    html.Ul(
+                                                                    [
+                                                                        #html.Li("Operaciones con datos y variables"),
+                                                                        #html.Li("Vectores y matrices"),
+                                                                        #html.Li("Estructura de programación en Matlab"),
+                                                                        #html.Li("Gráficos en 2D y 3D"),
+                                                                        #html.Li("Operaciones con polinomios y ecuaciones"),
+                                                                            
+                                                                    ])
+                                ],
+                            className = "tcrip"),
+                                dbc.ModalFooter(
+                                    dbc.Button("Cerrar", id="close-crip", color = "danger")
+                                ),
+                            ],
+                            id="modal-crip",
+                            size="lg",
+                            centered = True
+                        ),
+                dbc.Modal(
+                            [
+                                dbc.ModalHeader("Wolfram Mathematica"),
+                                dbc.ModalBody([
+                                    html.P("Temario en desarrollo. "),
+                                    html.Ul(
+                                                                    [
+                                                                        #html.Li("Operaciones con datos y variables"),
+                                                                        #html.Li("Vectores y matrices"),
+                                                                        #html.Li("Estructura de programación en Matlab"),
+                                                                        #html.Li("Gráficos en 2D y 3D"),
+                                                                        #html.Li("Operaciones con polinomios y ecuaciones"),
+                                                                            
+                                                                    ])
+                                ],
+                            className = "twol"),
+                                dbc.ModalFooter(
+                                    dbc.Button("Cerrar", id="close-wol", color = "danger")
+                                ),
+                            ],
+                            id="modal-wol",
                             size="lg",
                             centered = True
                         ),

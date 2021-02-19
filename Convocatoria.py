@@ -14,7 +14,7 @@ def convocatoria():
                                             className="lead",
                                         ),
                                         html.P(
-                                            "La convocatoria se abrirá la primera semana de regreso a clases (febrero 22-27) ",
+                                            "La convocatoria se abrirá la primera semana de regreso a clases (febrero 22-27), dando a conocer horarios y disponibilidad. ",
                                         ),
                                         html.P([
                                             "Requisitos indispensables: ",
@@ -62,14 +62,14 @@ def convocatoria2():
                                                 html.Div([
                                                         dbc.Row([
                                                         dbc.Col([
-                                                            dbc.Input(id = 'name',value='', type='text', style ={'width':'100%', 'margin-left':'auto','margin-right':'auto'}, placeholder = 'Empieza por tus nombres'),
-                                                        ], width = 9),
+                                                            dbc.Input(id = 'id_anterior',value='', type='text', style ={'width':'100%', 'margin-left':'auto','margin-right':'auto'}, placeholder = 'Puedes encontarlo en tu correo'),
+                                                        ], width = 10),
                                                         dbc.Col([
-                                                            dbc.Button('Hola')
-                                                        ], width = 3)
-                                                    ]),
+                                                            dbc.Button('Ir')
+                                                        ], width = 2)
+                                                    ], no_gutters=True,),
                                                 ], style = {'width':300, 'margin-left':'auto','margin-right':'auto'}),
-                                                    html.P('Si no has tomado cursos anteriores, déjalo en blanco.', style = {'color':color_footer,'margin-top':10}),
+                                                    html.P('Si no has tomado cursos anteriores, ignóralo.', style = {'color':color_footer,'margin-top':10}),
                                             dbc.Row([
                                                 dbc.Col([
                                                     #html.Div('Horarios sujetos a cupo, si se excede el primer horario mostrado se abrirá el otro.', style = {'font-size':'0.7em','color':color_letra}),

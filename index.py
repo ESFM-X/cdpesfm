@@ -135,7 +135,7 @@ def acerca():
                                 ]
                             ),
                             style={"width": "100%"},
-                        ), lg = 3, md = 4, style = {"padding":"10px", "padding-top":0}
+                        ), lg = 3, md = 4, sm=6, style = {"padding":"10px", "padding-top":0}
                 ),
                 dbc.Col(
                     dbc.Card(
@@ -154,7 +154,7 @@ def acerca():
                                 ]
                             ),
                             style={"width": "100%"},
-                        ),lg = 3, md = 4, style = {"padding":"10px", "padding-top":0},
+                        ),lg = 3, md = 4, sm=6,style = {"padding":"10px", "padding-top":0},
                     
                 ),
                 
@@ -175,7 +175,7 @@ def acerca():
                                 ]
                             ),
                             style={"width": "100%"},
-                        ),lg = 3, md = 4, style = {"padding":"10px", "padding-top":0}
+                        ),lg = 3, md = 4,sm=6, style = {"padding":"10px", "padding-top":0}
                 ),
                 dbc.Col(
                     dbc.Card(
@@ -194,7 +194,7 @@ def acerca():
                                 ]
                             ),
                             style={"width": "100%"},
-                        ),lg = 3, md = 4, style = {"padding":"10px", "padding-top":0}
+                        ),lg = 3, md = 4, sm=6,style = {"padding":"10px", "padding-top":0}
                 ),
                 dbc.Col(
                     dbc.Card(
@@ -213,7 +213,7 @@ def acerca():
                                 ]
                             ),
                             style={"width": "100%"},
-                        ),lg = 3, md = 4, style = {"padding":"10px", "padding-top":0}
+                        ),lg = 3, md = 4,sm=6, style = {"padding":"10px", "padding-top":0}
                 ),
                 dbc.Col(
                     dbc.Card(
@@ -232,7 +232,7 @@ def acerca():
                                 ]
                             ),
                             style={"width": "100%"},
-                        ),lg = 3, md = 4, style = {"padding":"10px", "padding-top":0}
+                        ),lg = 3, md = 4, sm=6,style = {"padding":"10px", "padding-top":0}
                 ),
                 dbc.Col(
                     dbc.Card(
@@ -251,11 +251,30 @@ def acerca():
                                 ]
                             ),
                             style={"width": "100%"},
-                        ),lg = 3, md = 4, style = {"padding":"10px", "padding-top":0}
+                        ),lg = 3, md = 4, sm=6,style = {"padding":"10px", "padding-top":0}
                 ),
-            ],justify="center",style = {'margin':30})
+                dbc.Col(
+                    dbc.Card(
+                            dbc.CardBody(
+                                [
+                                    html.Img(src= "https://cdn.discordapp.com/attachments/769365116562833429/812541520140959764/IMG_20201209_231732_531.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.H4("Jaaziel A. Bautista", className="card-title"),
+                                    html.H6("Python from Zero to Hero   ", className="card-subtitle"),
+                                    html.P(
+                                    #    "Asistió a todas las clases. ",
+                                        
+                                        className="card-text",
+                                    ),
+                                    #dbc.CardLink("Github", href="#"),
+                                    dbc.CardLink("Discord", href="https://discordapp.com/users/769361188025794570",target='_blank'),
+                                ]
+                            ),
+                            style={"width": "100%"},
+                        ),lg = 3, md = 4,sm=6, style = {"padding":"10px", "padding-top":0}
+                ),
+            ],justify="center")
             ], style = {"padding-left":5, "text-justify": "inter-word"})
         ], style = {"padding":20, "background-color":"white", "color":"#3F3F3F"}
     ),
-    ], style = {'margin':30})
+    ])
     ]

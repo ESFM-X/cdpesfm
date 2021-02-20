@@ -324,7 +324,10 @@ def elegir_horario(curso):
 def searching(n,text):
     
     if n != None:
-        return ['/search&q='+text.replace(' ','+')]
+        try:
+            return ['/search&q='+text.replace(' ','+')]
+        except:
+            return ['/search*']
         
     else:
         raise dash.exceptions.PreventUpdate()
@@ -338,6 +341,8 @@ def search_title(n,text):
     
     if '/search' in text:
         #print(text, "dsadssd")
+        if text == '/search*':
+            return ['Easter Egg'],''
         try:
             return [['Resultados de la búsqueda para ', html.P(text[10:].replace('+',' '), style = {"font-weight":"bold", "display":"inline"})],text[10:].replace('+',' ')]
         except:

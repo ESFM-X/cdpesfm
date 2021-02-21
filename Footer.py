@@ -12,9 +12,9 @@ def footer():
                                             html.Img(src="https://fotos.subefotos.com/d832491f73b5c1db1fa9d6d704177fcao.png", height = 40, style = {"margin":5}),
                                             html.Div([
                                                 html.A('Facebook   ', href = '#', style = {'color':'#3b5998', 'text-align':'center'}),    #,target='_blank'
-                                                html.A('   Instagram', href = '#', style = {'padding-left':10,'color':'#C13584', 'text-align':'center'}),    #,target='_blank'
-                                                html.A('   Discord', href = 'https://discord.com/invite/JxS59BFBu3',target='_blank', style = {'padding-left':10,'color':'#7289da', 'text-align':'center'})    
-                                            ], style = {"padding-left":27})
+                                                #html.A('   Instagram', href = '#', style = {'padding-left':10,'color':'#C13584', 'text-align':'center'}),    #,target='_blank'
+                                                html.A('   Discord', href = 'https://discord.com/users/396799146977132544',target='_blank', style = {'padding-left':10,'color':'#7289da', 'text-align':'center'})    
+                                            ], style = {"padding-left":65})
                                         ],
                                         style = {"margin-left":"auto","margin-right":"auto", "width":282, "padding-bottom":10}
                                     ),

@@ -14,7 +14,7 @@ def convocatoria():
                                             className="lead",
                                         ),
                                         html.P(
-                                            "La convocatoria se abrirá la primera semana de regreso a clases (febrero 22-27), dando a conocer horarios y disponibilidad. ",
+                                            "La convocatoria se abrirá la primera semana de regreso a clases (febrero 22-27), dando a conocer horarios, disponibilidad y fechas de inicio. ",
                                         ),
                                         html.P([
                                             "Requisitos indispensables: ",

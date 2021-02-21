@@ -30,7 +30,7 @@ def cursos():
                             html.Small("Douglas Adams", className="text-muted")
                         ),
                     ],
-                    className="blockquote",
+                    className="blockquote",style = {'text-align':'justify'}
                 )
             ]
         )
@@ -42,7 +42,7 @@ def cursos():
                     html.H5("Ingeniería de Datos", className="card-title"),
                     html.P(
                         "Aprende los procesos para obtener datos del mundo real. Conocerás a profundidad los procesos para la obtención de datos y su tratamiento, dejándolos listos para su análisis posterior (ETL). También automatizarás esos procesos.",
-                        className="card-text",
+                        className="card-text",style = {'text-align':'justify'}
                     ),
                     dbc.Button("Ver temario", color="danger", id = "ting"),
                 ]
@@ -56,7 +56,7 @@ def cursos():
                     html.H5("MATLAB", className="card-title"),
                     html.P(
                         "Aprende análisis iterativo y logra expresar las matemáticas de matrices y arrays con las tecnologías que ofrece MATLAB.",
-                        className="card-text",
+                        className="card-text",style = {'text-align':'justify'}
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tmat"),
                 ]
@@ -69,7 +69,7 @@ def cursos():
                     html.H5("Criptografía Aplicada en C++", className="card-title"),
                     html.P(
                         "Existen datos 'sensibles' como lo son: planes de operaciones comerciales o militares, movimientos financieros de empresas y personas, entre otras. En general nos referimos a 'información sensible' a cualquiera que en caso de caer en manos equivocadas mientras viaja por un medio inseguro (como el Internet) desencadene en un daño para la persona u organización dueño de ella; como: pérdidas de dinero, invasión de privacidad o anticipación de estrategias, etc. ",
-                        className="card-text",
+                        className="card-text",style = {'text-align':'justify'}
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tcrip"),
                 ]
@@ -82,7 +82,7 @@ def cursos():
                     html.H5("Python from Hero to God", className="card-title"),
                     html.P(
                         "Con este curso llegarás al siguiente nivel, en el que aprenderás cómo desarrollar todos los proyectos que tengas en mente. Podrás obtener datos de tus usuarios desde una interfaz de escritorio, una página web o hasta una aplicación móvil.",
-                        className="card-text",
+                        className="card-text",style = {'text-align':'justify'}
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tpya"),
                 ]
@@ -95,7 +95,7 @@ def cursos():
                     html.H5("Introducción a Machine Learning con Python", className="card-title"),
                     html.P(
                         "Obtén los fundamentos para modelar con algoritmos de Machine Learning e Inteligencia Artificial el mundo real.  ",
-                        className="card-text",
+                        className="card-text",style = {'text-align':'justify'}
                     ),
                     dbc.Button("Ver temario", color="danger"),
                 ]
@@ -108,7 +108,7 @@ def cursos():
                     html.H5("Wolfram Mathematica", className="card-title"),
                     html.P(
                         "Deja de utilizar Word y aprende a darle formato a tus ecuaciones y documentos científicos en Mathematica. En este curso conocerás su sintáxis y cómo programar.",
-                        className="card-text",
+                        className="card-text", style = {'text-align':'justify'}
                     ),
                     dbc.Button("Ver temario", color="danger", id = "twol"),
                 ]
@@ -327,5 +327,5 @@ def cursos():
                             size="lg",
                             centered = True
                         ),
-            ], style = {"padding":"30px", "padding-top":20,'text-align':'justify'}
+            ], style = {"padding":"30px", "padding-top":20}#,'text-align':'justify'}
         )]

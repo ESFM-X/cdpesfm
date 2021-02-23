@@ -272,9 +272,9 @@ def acerca():
                             style={"width": "100%"},
                         ),lg = 3, md = 4,sm=6, style = {"padding":"10px", "padding-top":0}
                 ),
-            ],justify="center", style = {"padding":40})
-            ], style = {"padding-left":5, "text-justify": "inter-word"})
-        ], style = {"padding":10, "background-color":"white", "color":"#3F3F3F"}
+            ],justify="center", style = {"padding":30, "width":"100%"})
+            ], style = {"padding-left":15, "text-justify": "inter-word"})
+        ], style = {"padding":0, "background-color":"white", "color":"#3F3F3F"}
     ),
     ])
     ]

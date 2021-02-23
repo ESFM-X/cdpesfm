@@ -49,7 +49,7 @@ def soporte():
 
     radios_input = dbc.FormGroup(
         [
-            dbc.Label("Motivo*:", html_for="example-radios-row", width=4, style = {'text-align':'right'}),
+            dbc.Label("Motivo*", html_for="example-radios-row", width=4, style = {'text-align':'right'}),
             dbc.Col(
                 dbc.RadioItems(
                     id="interes",

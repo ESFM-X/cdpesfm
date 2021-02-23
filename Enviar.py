@@ -203,15 +203,16 @@ def send_email(to,name,ide,curso):
             elif cu == 'Matlab':
                 link+= ' <br><li> • <a href ="https://www.google.com" target="_blank"  style = "color: #f9a836;"> MATLAB </a> </li> '
                 cursos += ' MATLAB*'
-            elif curso == 'Python-hg':
-                link = 'https://www.google.com'
-                curso = ' Python from Hero to God*'
-            elif curso == 'Criptografia':
-                link = 'https://www.google.com'
-                curso += ' Criptografía Aplicada en C++*'
-            elif curso == 'Wolfram':
-                link = 'https://www.google.com'
-                curso += ' Wolfram Mathematica*'
+            elif cu == 'Python-hg':
+                link += 'https://www.google.com'
+                cursos += ' Python from Hero to God*'
+            elif cu == 'Criptografia':
+                link += 'https://www.google.com'
+                cursos += ' Criptografía Aplicada en C++*'
+            elif cu == 'Wolfram':
+                link += 'https://www.google.com'
+                cursos += ' Wolfram Mathematica*'
+        #print(cursos)
         with smtplib.SMTP('smtp.gmail.com',587) as smtp:
             smtp.ehlo()
             smtp.starttls()
@@ -262,7 +263,7 @@ def send_email(to,name,ide,curso):
                                         {discord}
                                         {test}
                                         <br></br>
-                                        <p>En los próximos días te estaremos enviando un correo para validar tus datos y cupo de los cursos, para así confirmar tu aceptación al CdP ESFM. </p> 
+                                        <p>En los próximos días te estaremos enviando un correo para validar tus datos y cupo de los cursos, para así confirmar tu ingreso al CdP ESFM. </p> 
                                     </div>
                                 </body>
                             </html>

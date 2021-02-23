@@ -68,7 +68,7 @@ def cursos():
                 [
                     html.H5("Criptografía Aplicada en C++", className="card-title"),
                     html.P(
-                        "Existen datos 'sensibles' como lo son: planes de operaciones comerciales o militares, movimientos financieros de empresas y personas, entre otras. En general nos referimos a 'información sensible' a cualquiera que en caso de caer en manos equivocadas mientras viaja por un medio inseguro (como el Internet) desencadene en un daño para la persona u organización dueño de ella; como: pérdidas de dinero, invasión de privacidad o anticipación de estrategias, etc. ",
+                        "Dentro de operaciones comerciales, movimientos financieros o autenticación de identidades, se trabaja con información sensible, que de caer en manos de receptores no autorizados al viajar por un medio inseguro (como internet) puede ser usada con un fin dañino. En este curso, aprenderás a proteger está información a partir de C++.",
                         className="card-text",style = {'text-align':'justify'}
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tcrip"),
@@ -262,12 +262,16 @@ def cursos():
                                     html.P("Temario en desarrollo. "),
                                     html.Ul(
                                                                     [
-                                                                        #html.Li("Operaciones con datos y variables"),
-                                                                        #html.Li("Vectores y matrices"),
-                                                                        #html.Li("Estructura de programación en Matlab"),
-                                                                        #html.Li("Gráficos en 2D y 3D"),
-                                                                        #html.Li("Operaciones con polinomios y ecuaciones"),
-                                                                            
+                                                                        html.Li("Introducción a la ingeniería de software"),
+                                                                        html.Li("Introducción al diseño de experiencia de usuario"),
+                                                                        html.Li("Repaso de POO"),
+                                                                        html.Li("Interfaces de escritorio con Tkinter"),
+                                                                        html.Li("Introducción al desarrollo web"),
+                                                                        html.Li("Desarrollo web con Plotly Dash"),
+                                                                        html.Li("Introducción a bases de datos"),
+                                                                        html.Li("Desarrollo de aplicaciones móviles con Kivy"),
+                                                                        html.Li("Desarrollo de videojuegos con Pygame"),
+                                                                        html.Li("Cómputo científico y métodos numéricos"),
                                                                     ])
                                 ],
                             className = "tpya"),
@@ -310,9 +314,11 @@ def cursos():
                                     html.P("Temario en desarrollo. "),
                                     html.Ul(
                                                                     [
-                                                                        #html.Li("Operaciones con datos y variables"),
-                                                                        #html.Li("Vectores y matrices"),
-                                                                        #html.Li("Estructura de programación en Matlab"),
+                                                                        html.Li("Computación numérica"),
+                                                                        html.Li("Computación simbólica"),
+                                                                        html.Li("Comptuación matemática superior"),
+                                                                        html.Li("Métodos numéricos"),
+                                                                        html.Li("Visualización y graficación"),
                                                                         #html.Li("Gráficos en 2D y 3D"),
                                                                         #html.Li("Operaciones con polinomios y ecuaciones"),
                                                                             

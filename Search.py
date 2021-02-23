@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 
 page = html.Div([
-    html.H1('Búsqueda'),
+    
     html.P(id = 'busqueda_p')
 
     

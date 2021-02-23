@@ -106,6 +106,18 @@ string = """
                 background:linear-gradient(0deg,#644598 , #589db4)!important;
                 color: white;
             }
+            .twol{
+                background:linear-gradient(0deg,#bc01aa , #53ac8f)!important;
+                color: white;
+            }
+            .tpya{
+                background:linear-gradient(0deg,#633a93 , #c33c4b)!important;
+                color: white;
+            }
+            .tcrip{
+                background:linear-gradient(0deg,#ff7100 , #33005a)!important;
+                color: white;
+            }
 
 
             .btn-outline-success{

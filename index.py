@@ -14,7 +14,7 @@ def acerca():
             html.Div([
                 html.H1("Únete a la comunidad", className="display-3", style ={"font-size":"3rem"} ),
                 html.P(
-                    "De ESFM para esfemitas ",
+                    "De esfemitas para esfemitas ",
                     className="lead",
                 ),
                 html.Hr(className="my-2"),

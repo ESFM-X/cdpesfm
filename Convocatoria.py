@@ -62,7 +62,7 @@ def convocatoria2(ide = None, nombre = None, boleta = None, correo = None, carre
                                                 dbc.Col(html.Img (src='https://fotos.subefotos.com/673fd6a8b257776bc02619ac941b0783o.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
                                                 dbc.Col(html.Img (src='https://fotos.subefotos.com/8ad0901fd4fa9dbb648e720c3520b701o.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
                                                 dbc.Col(html.Img (src='https://fotos.subefotos.com/2eb394d174d94e6c0aff2a8f15cd7d42o.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
-                                                dbc.Col(html.Img (src='https://fotos.subefotos.com/b9f685b46516bb353e5ee01c7adf60bco.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
+                                                dbc.Col(html.Img (src='https://fotos.subefotos.com/a91e42ffd6b2dd249ecb4df0bb1c234do.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
                                                 dbc.Col(html.Img (src='https://fotos.subefotos.com/48b519d4b7109cb58d21dfceb259d54bo.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
                                                 #dbc.Col(html.Img (src='https://fotos.subefotos.com/dee1790fc6bec5718d06ec4c8d80ee71o.png'))
                                             ], justify = 'center'),
@@ -235,7 +235,7 @@ def convocatoria2(ide = None, nombre = None, boleta = None, correo = None, carre
                                                 dbc.Col(html.Img (src='https://fotos.subefotos.com/673fd6a8b257776bc02619ac941b0783o.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
                                                 dbc.Col(html.Img (src='https://fotos.subefotos.com/8ad0901fd4fa9dbb648e720c3520b701o.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
                                                 dbc.Col(html.Img (src='https://fotos.subefotos.com/2eb394d174d94e6c0aff2a8f15cd7d42o.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
-                                                dbc.Col(html.Img (src='https://fotos.subefotos.com/b9f685b46516bb353e5ee01c7adf60bco.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
+                                                dbc.Col(html.Img (src='https://fotos.subefotos.com/a91e42ffd6b2dd249ecb4df0bb1c234do.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
                                                 dbc.Col(html.Img (src='https://fotos.subefotos.com/48b519d4b7109cb58d21dfceb259d54bo.png', style = {'width':'100%'}), lg = 3, md = 4, sm = 5, xs = 6),
                                                 #dbc.Col(html.Img (src='https://fotos.subefotos.com/dee1790fc6bec5718d06ec4c8d80ee71o.png'))
                                             ], justify = 'center'),

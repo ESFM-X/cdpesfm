@@ -117,16 +117,16 @@ def send_email(to,name,ide,curso):
             link = 'https://discord.gg/NnpsUEy'
             curso = 'Pandas para Ciencia de Datos'
         elif curso == 'Matlab':
-            link = 'https://www.google.com'
+            link = 'https://discord.gg/fxVk5x6h2B'
             curso = 'MATLAB'
         elif curso == 'Python-hg':
-            link = 'https://www.google.com'
+            link = 'https://discord.gg/eDwjxNBAuh'
             curso = 'Python from Hero to God'
         elif curso == 'Criptografia':
-            link = 'https://www.google.com'
+            link = 'https://discord.gg/xfvvzwTs7a'
             curso = 'Criptografía Aplicada en C++'
         elif curso == 'Wolfram':
-            link = 'https://www.google.com'
+            link = 'https://discord.gg/z6hMkM4cjH'
             curso = 'Wolfram Mathematica'
         
         with smtplib.SMTP('smtp.gmail.com',587) as smtp:
@@ -138,24 +138,24 @@ def send_email(to,name,ide,curso):
             except:
                 return 0
             else:
-                if curso == 'Matlab':
-                    body = "Hola {}, bienvenido(a) al Club de Programación ESFM. \n\n Tu ID de registro es: {} \n\n ¡Nos alegra que te intereses en nuestro curso {}! Muy pronto nos pondremos en contacto contigo para invitarte a Microsoft Teams.".format(name,ide,curso)
-                    test = ''
-                    discord = f"""   
-                                        <p>Nos alegra que te intereses en nuestro curso {curso}. Muy pronto te enviaremos el enlace para que te unas a Microsoft Teams.  </p>
-                                """
-                elif curso == 'Ingeniería de datos' or curso == 'Pandas para ciencia de datos':
-                    body = "Hola {}, bienvenido(a) al Club de Programación ESFM. \n\n Tu ID de registro es: {} \n\n ¡Nos alegra que te intereses en nuestro curso {}! Te enviamos el link de la plataforma que ocuparemos para las sesiones: \n {} .\n Si no estás familiarizado con Discord, te adjuntamos una guía que preparamos:\n {}\n\n Si no has hecho el Test, no pierdas tu lugar y accede al siguiente enlace para realizarlo (sólo lo tienes que hacer una vez): \n https://cdpesfm.college/test?id={}&name={}".format(name,ide,curso,link,discord_tutorial,encrypt(ide),encrypt(name))
-                    #test = f"""<p> Si no has hecho el Test, no pierdas tu lugar y accede al siguiente enlace para realizarlo (sólo lo tienes que hacer una vez):<p>
-                    #            <a href = "https://cdpesfm.college/test?id={encrypt(ide)}&name={encrypt(name)}" style="color: #f9a836;">Hacer Test</a>"""
-                    test = ''
-                    discord = f"""       <p>Nos alegra que te intereses en nuestro curso {curso}. Te enviamos el link de la plataforma que ocuparemos para las sesiones: <a href = "{link}" style="color: #f9a836;">Discord</a>.  </p>
-                                        <p> Si no estás familiarizado con Discord, te adjuntamos una guía que preparamos: <a href = "{discord_tutorial}" style="color: #f9a836;">Tutorial Discord</a>.  </p>
-                                        <br></br>"""
-                else:
-                    body = "Hola {}, bienvenido(a) al Club de Programación ESFM. \n\n Tu ID de registro es: {} \n\n ¡Nos alegra que te intereses en nuestro curso {}! Te enviamos el link de la plataforma que ocuparemos para las sesiones: \n {} . \nSi no estás familiarizado con Discord, te adjuntamos una guía que preparamos: \n{}\n\n ".format(name,ide,curso,link,discord_tutorial)
-                    test = ''
-                    discord = f"""       <p>Nos alegra que te intereses en nuestro curso {curso}. Te enviamos el link de la plataforma que ocuparemos para las sesiones: <a href = "{link}" style="color: #f9a836;">Discord</a>.  </p>
+                # if curso == 'Matlab':
+                #     body = "Hola {}, bienvenido(a) al Club de Programación ESFM. \n\n Tu ID de registro es: {} \n\n ¡Nos alegra que te intereses en nuestro curso {}! Muy pronto nos pondremos en contacto contigo para invitarte a Microsoft Teams.".format(name,ide,curso)
+                #     test = ''
+                #     discord = f"""   
+                #                         <p>Nos alegra que te intereses en nuestro curso {curso}. Muy pronto te enviaremos el enlace para que te unas a Microsoft Teams.  </p>
+                #                 """
+                # elif curso == 'Ingeniería de datos' or curso == 'Pandas para ciencia de datos':
+                #     body = "Hola {}, bienvenido(a) al Club de Programación ESFM. \n\n Tu ID de registro es: {} \n\n ¡Nos alegra que te intereses en nuestro curso {}! Te enviamos el link de la plataforma que ocuparemos para las sesiones: \n {} .\n Si no estás familiarizado con Discord, te adjuntamos una guía que preparamos:\n {}\n\n Si no has hecho el Test, no pierdas tu lugar y accede al siguiente enlace para realizarlo (sólo lo tienes que hacer una vez): \n https://cdpesfm.college/test?id={}&name={}".format(name,ide,curso,link,discord_tutorial,encrypt(ide),encrypt(name))
+                #     #test = f"""<p> Si no has hecho el Test, no pierdas tu lugar y accede al siguiente enlace para realizarlo (sólo lo tienes que hacer una vez):<p>
+                #     #            <a href = "https://cdpesfm.college/test?id={encrypt(ide)}&name={encrypt(name)}" style="color: #f9a836;">Hacer Test</a>"""
+                #     test = ''
+                #     discord = f"""       <p>Nos alegra que te intereses en nuestro curso {curso}. Te enviamos el link de la plataforma que ocuparemos para las sesiones: <a href = "{link}" style="color: #f9a836;">Discord</a>.  </p>
+                #                         <p> Si no estás familiarizado con Discord, te adjuntamos una guía que preparamos: <a href = "{discord_tutorial}" style="color: #f9a836;">Tutorial Discord</a>.  </p>
+                #                         <br></br>"""
+                # else:
+                body = "Hola {}, bienvenido(a) al Club de Programación ESFM. \n\n Tu ID de registro es: {} \n\n ¡Nos alegra que te intereses en nuestro curso {}! Te enviamos el link de la plataforma que ocuparemos para las sesiones: \n {} . \nSi no estás familiarizado con Discord, te adjuntamos una guía que preparamos: \n{}\n\n ".format(name,ide,curso,link,discord_tutorial)
+                test = ''
+                discord = f"""       <p>Nos alegra que te intereses en nuestro curso {curso}. Te enviamos el link de la plataforma que ocuparemos para las sesiones: <a href = "{link}" style="color: #f9a836;">Discord</a>.  </p>
                                         <p> Si no estás familiarizado con Discord, te adjuntamos una guía que preparamos: <a href = "{discord_tutorial}" style="color: #f9a836;">Tutorial Discord</a>.  </p>
                                         <br></br>"""
                 msg = f'Subject: {subject}\n\n{body}'
@@ -201,16 +201,16 @@ def send_email(to,name,ide,curso):
                 link+= ' <br><li> • <a href ="https://discord.gg/NnpsUEy" target="_blank" style = "color: #f9a836;"> Pandas para Ciencia de Datos </a> </li> '
                 cursos += ' Pandas para Ciencia de Datos*'
             elif cu == 'Matlab':
-                link+= ' <br><li> • <a href ="https://www.google.com" target="_blank"  style = "color: #f9a836;"> MATLAB </a> </li> '
+                link+= ' <br><li> • <a href ="https://discord.gg/fxVk5x6h2B" target="_blank"  style = "color: #f9a836;"> MATLAB </a> </li> '
                 cursos += ' MATLAB*'
             elif cu == 'Python-hg':
-                link += 'https://www.google.com'
+                link += ' <br><li> • <a href ="https://discord.gg/eDwjxNBAuh" target="_blank"  style = "color: #f9a836;"> Python from Hero to God </a> </li>'
                 cursos += ' Python from Hero to God*'
             elif cu == 'Criptografia':
-                link += 'https://www.google.com'
+                link += ' <br><li> • <a href ="https://discord.gg/xfvvzwTs7a" target="_blank"  style = "color: #f9a836;"> Critografía Aplicada en C++ </a> </li>'
                 cursos += ' Criptografía Aplicada en C++*'
             elif cu == 'Wolfram':
-                link += 'https://www.google.com'
+                link += '<br><li> • <a href ="https://discord.gg/z6hMkM4cjH" target="_blank"  style = "color: #f9a836;"> Wolfram Mathematica </a> </li>'
                 cursos += ' Wolfram Mathematica*'
         #print(cursos)
         with smtplib.SMTP('smtp.gmail.com',587) as smtp:
@@ -262,6 +262,8 @@ def send_email(to,name,ide,curso):
                                         <br></br>
                                         {discord}
                                         {test}
+                                        <br></br>
+                                        <p> Si no estás familiarizado con Discord, te adjuntamos una guía que preparamos: <a href = "{discord_tutorial}" style="color: #f9a836;">Tutorial Discord</a>.  </p>
                                         <br></br>
                                         <p>En los próximos días te estaremos enviando un correo para validar tus datos y cupo de los cursos, para así confirmar tu ingreso al CdP ESFM. </p> 
                                     </div>

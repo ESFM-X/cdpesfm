@@ -217,7 +217,7 @@ def convocatoria2(ide = None, nombre = None, boleta = None, correo = None, carre
                                         
             ]
     else:
-        print(ide)
+        #print(ide)
         return [html.Div([
                                             html.H1("Convocatoria 2021-2", className="display-3" , style ={"font-size":"3rem", "color":color_letra}, ),
                                             html.P(

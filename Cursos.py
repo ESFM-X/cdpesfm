@@ -287,14 +287,15 @@ def cursos():
                             [
                                 dbc.ModalHeader("Criptografía Aplicada en C++"),
                                 dbc.ModalBody([
-                                    html.P("Temario en desarrollo. "),
+                                    html.P("Temario:  "),
                                     html.Ul(
                                                                     [
-                                                                        #html.Li("Operaciones con datos y variables"),
-                                                                        #html.Li("Vectores y matrices"),
-                                                                        #html.Li("Estructura de programación en Matlab"),
-                                                                        #html.Li("Gráficos en 2D y 3D"),
-                                                                        #html.Li("Operaciones con polinomios y ecuaciones"),
+                                                                        html.Li("Manejo de datos a nivel de bits"),
+                                                                        html.Li("Programación de algoritmos clásicos de cifrado"),
+                                                                        html.Li("Técnicas modernas de cifrado"),
+                                                                        html.Li("Criptosistemas simétricos"),
+                                                                        html.Li("Criptosistemas asimétricos"),
+                                                                        html.Li("Ataques de cifrado"),
                                                                             
                                                                     ])
                                 ],
@@ -311,7 +312,7 @@ def cursos():
                             [
                                 dbc.ModalHeader("Wolfram Mathematica"),
                                 dbc.ModalBody([
-                                    html.P("Temario en desarrollo. "),
+                                    html.P("Temario:  "),
                                     html.Ul(
                                                                     [
                                                                         html.Li("Computación numérica"),

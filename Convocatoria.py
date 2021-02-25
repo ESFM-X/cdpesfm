@@ -48,7 +48,7 @@ def convocatoria2(ide = None, nombre = None, boleta = None, correo = None, carre
             return [html.Div([
                                             html.H1("Convocatoria 2021-2", className="display-3" , style ={"font-size":"3rem", "color":color_letra}, ),
                                             html.P(
-                                                "Llena el siguiente formulario y espera una confirmación por e-mail",style = {"color":color_letra},
+                                                "Llena el siguiente formulario y espera una confirmación por e-mail. Iniciamos el 1 de marzo.",style = {"color":color_letra},
                                                 className="lead",
                                             ),
                                         # html.Div(
@@ -221,7 +221,7 @@ def convocatoria2(ide = None, nombre = None, boleta = None, correo = None, carre
         return [html.Div([
                                             html.H1("Convocatoria 2021-2", className="display-3" , style ={"font-size":"3rem", "color":color_letra}, ),
                                             html.P(
-                                                "Llena el siguiente formulario y espera una confirmación por e-mail",style = {"color":color_letra},
+                                                "Llena el siguiente formulario y espera una confirmación por e-mail. Iniciamos el 1 de marzo.",style = {"color":color_letra},
                                                 className="lead",
                                             ),
                                         # html.Div(

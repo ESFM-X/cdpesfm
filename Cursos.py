@@ -68,7 +68,7 @@ def cursos():
                 [
                     html.H5("Criptografía Aplicada en C++", className="card-title"),
                     html.P(
-                        "Dentro de operaciones comerciales, movimientos financieros o autenticación de identidades, se trabaja con información sensible, que de caer en manos de receptores no autorizados al viajar por un medio inseguro (como internet) puede ser usada con un fin dañino. En este curso aprenderás los algoritmos más conocidos de encriptación que te ayudarán a proteger esa información. No son necesarios conocimientos previos de C++.",
+                        "Dentro de operaciones comerciales, movimientos financieros o autenticación de identidades, se trabaja con información sensible, que de caer en manos de receptores no autorizados al viajar por un medio inseguro (como internet) puede ser usada con un fin dañino. En este curso aprenderás los algoritmos más conocidos de encriptación que te ayudarán a proteger esa información. No son necesarios conocimientos previos.",
                         className="card-text",style = {'text-align':'justify'}
                     ),
                     dbc.Button("Ver temario", color="danger", id = "tcrip"),

@@ -85,7 +85,7 @@ def display_page(pathname, url):
     elif pathname == '/soporte':
         return [[Header.header()] +Soporte.soporte()+ Footer.footer()]
     elif pathname == '/convocatoria':
-        return [[Header.header()] +Convocatoria.convocatoria()+ Footer.footer()]
+        return [[Header.header()] +Convocatoria.convocatoria2()+ Footer.footer()]
     elif pathname[0:7] == '/search':
         return [[Header.header()] + [Search.page] + Footer.footer()]
     else:#if pathname == '/proyectos':

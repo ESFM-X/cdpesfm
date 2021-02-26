@@ -106,6 +106,7 @@ def convocatoria2(ide = None, nombre = None, boleta = None, correo = None, carre
                                                                 {'label': 'Lic. en Matemática Algorítmica', 'value': 'Mat'},
                                                                 {'label': 'Lic. en Física y Matemáticas', 'value': 'Lic'},
                                                                 {'label': 'Ingeniería Matemática', 'value': 'Ing'},
+                                                                {'label':'Otra', 'value':'Otr'}
                                                             
                                                             ],
                                                             value='',
@@ -278,6 +279,7 @@ def convocatoria2(ide = None, nombre = None, boleta = None, correo = None, carre
                                                                 {'label': 'Lic. en Matemática Algorítmica', 'value': 'Mat'},
                                                                 {'label': 'Lic. en Física y Matemáticas', 'value': 'Lic'},
                                                                 {'label': 'Ingeniería Matemática', 'value': 'Ing'},
+                                                                {'label':'Otra', 'value':'Otr'}
                                                             
                                                             ],
                                                             value=carrera,

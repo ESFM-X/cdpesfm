@@ -10,21 +10,21 @@ def convocatoria():
     return [html.Div([
                                         html.H1("Convocatoria 2021-2", className="display-3" , style ={"font-size":"3rem"} ),
                                         html.P(
-                                            "Falta muy poco para que puedas ser parte de nuestra comunidad",
+                                            "El tiempo de registro ha terminado",
                                             className="lead",
                                         ),
                                         html.P(
-                                            "La convocatoria se abrirá la primera semana de regreso a clases (febrero 25-28), dando a conocer horarios, disponibilidad y fechas de inicio. ",
+                                            "Iniciamos los cursos a partir del 1 de marzo en el día indicado. ",
                                         ),
-                                        html.P([
-                                            "Requisitos indispensables: ",
-                                            html.Ul([
-                                                html.Li("Ser parte de la comunidad de estudiantes politécnica"),
-                                                html.Li("Tener tu boleta y correo institucional activos"),
-                                                html.Li("Si ya has tomado cursos en el CdP ESFM, tener tu ID de registro anterior")
-                                            ])
+                                        # html.P([
+                                        #     "Requisitos indispensables: ",
+                                        #     html.Ul([
+                                        #         html.Li("Ser parte de la comunidad de estudiantes politécnica"),
+                                        #         html.Li("Tener tu boleta y correo institucional activos"),
+                                        #         html.Li("Si ya has tomado cursos en el CdP ESFM, tener tu ID de registro anterior")
+                                        #     ])
 
-                                        ])
+                                        # ])
                                         
                                         
                                                 

@@ -10,7 +10,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-import indexString, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar, Search, Datos
+import indexString, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar, Search, Datos, Ingresar
 
 cred = credentials.Certificate("formularioesfm-firebase-adminsdk-f9csg-da5faa24f2.json")
 firebase_admin.initialize_app(cred,{'projectId': 'formularioesfm'},'pagina')#,{'projectId': 'formularioesfm'},'pagina')
@@ -85,11 +85,37 @@ def display_page(pathname, url):
     elif pathname == '/soporte':
         return [[Header.header()] +Soporte.soporte()+ Footer.footer()]
     elif pathname == '/convocatoria':
-        return [[Header.header()] +Convocatoria.convocatoria2()+ Footer.footer()]
+        return [[Header.header()] +Convocatoria.convocatoria()+ Footer.footer()]
     elif pathname[0:7] == '/search':
         return [[Header.header()] + [Search.page] + Footer.footer()]
+    elif pathname == '/ingresar':
+        return [[Header.header()]  +Ingresar.ingresar() +Footer.footer()]
+    elif pathname == '/perfil':
+        return [[Header.header()]  + Footer.footer()]
     else:#if pathname == '/proyectos':
         return [[Header.header()] + index.acerca() + Footer.footer()]
+
+@app.callback([Output('etiqueta_ingreso', 'children'),
+               Output('mensaje-exito2', 'children'), 
+               Output('mensaje-error2', 'children'),
+               Output('mensaje-contrasena', 'children'),
+               Output('input_ingreso', 'value'), 
+               Output('input_ingreso', 'type'), 
+               Output('input_ingreso', 'disabled')], 
+               [Input('ingresar_boton', 'n_clicks')], 
+               [State('input_ingreso', 'value')])
+def check_id(n, ide):
+    ides = ['asd', 'abd']
+    
+    if n:
+        if ide not in ides:
+            return ['ID:'], None, ['No se ha encontrado tu ID'], None, None, 'text', False
+        else:
+           
+            return ['ID:'], ['Conectándose...'],None, None, None, 'password', False
+
+    else: 
+        raise PreventUpdate()
 
 @app.callback(
     Output("navbar-collapse", "is_open"),
@@ -382,7 +408,8 @@ def search_title(n,text):
         #print(text[14:])
         datos = obtener_datos(text[14:])
         if datos:
-            return Convocatoria.convocatoria2(ide = text[14:], nombre = datos[0], boleta = datos[1], correo = datos[2],carrera = datos[3],semestre = datos[4]+1), ''
+            return Convocatoria.convocatoria(), ''
+            #return Convocatoria.convocatoria2(ide = text[14:], nombre = datos[0], boleta = datos[1], correo = datos[2],carrera = datos[3],semestre = datos[4]+1), ''
         else:
             return [html.H1('Error'),'El ID no ha sido encontrado.'],''
     

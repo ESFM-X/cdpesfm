@@ -44,7 +44,9 @@ def header():
                                             dbc.NavItem(dbc.NavLink("📑 Convocatoria", href="/convocatoria"), style ={'list-style-type': 'none', "font-weight": "bold"}),
                                             #dbc.NavItem(dbc.NavLink("🧦 Artículos", href="/articulos"), style ={'list-style-type': 'none', "font-weight": "bold"}),
                                             dbc.NavItem(dbc.NavLink("☎ Soporte", href="/soporte"), style ={'list-style-type': 'none', "font-weight": "bold"}),
-                                            search_bar
+                                           # dbc.NavItem(dbc.NavLink("🏚 Ingresar", href="/ingresar"), style ={'list-style-type': 'none', "font-weight": "bold"}),
+                                            search_bar,
+                                            
                                         ],
                              id="navbar-collapse", 
                              navbar=True),

@@ -2,19 +2,19 @@ import dash_bootstrap_components as dbc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
 
-imagenes = {"in1ui2w0":{"url":"https://fotos.subefotos.com/d83225a1aa187bf6535ff956ce7479f5o.png",
+imagenes = {"in1ui2w0":{"url":"https://fotos.subefotos.com/a5dad493c6f317756745afd664e5bff1o.png",
                         "curso":"Taller de Ingeniería de Datos",
-                        "Fecha": "Enero del 2021",
+                        "Fecha": "20 de marzo del 2021",
                         "Nombre": "Rodolfo Carlos Lagunas  Jardines"
                         },
-            "ineids20":{"url":"https://fotos.subefotos.com/edcf3625ded3116eef279107933da6c6o.png",
+            "ineids20":{"url":"https://fotos.subefotos.com/3a9322d21dd18c53a1b76747925cf4e2o.png",
                         "curso":"Taller de Ingeniería de Datos",
                         "Fecha": "Enero del 2021",
                         "Nombre": "Antonio Elias Vargas",
                         },
-            "ineids21":{"url":"https://fotos.subefotos.com/67b48bbd07732205fe97842383e0fe0ao.png",
+            "ineids21":{"url":"https://fotos.subefotos.com/27736987a9028e2b57ed5281f339e449o.png",
                         "curso":"Taller de Pandas para Ciencia de Datos",
-                        "Fecha": "Enero del 2021",
+                        "Fecha": "20 de marzo del 2021",
                         "Nombre": "Antonio Elias Vargas"
                         }}
 
@@ -43,8 +43,7 @@ def certificado(datos):
                                 ),
                                 
                                 html.P(
-                                    """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis condimentum eros ut congue. In eget tortor vel tortor lacinia porta. Praesent consequat ultrices dictum. In a vestibulum nisl. Mauris sit amet neque eu risus ultricies congue. Phasellus facilisis dui neque, vel bibendum nisi pellentesque imperdiet. 
-                                        """, 
+                                    imagenes[datos]["Nombre"].capitalize().split(' ')[0] + """ realizó las actividades y adquirió los conocimientos necesarios para poder concluir satisfactoriamente del """ + imagenes[datos]["curso"] + """, demostrando las habilidades mediante retos precisos que verifican su correcto aprendizaje.""", 
                                     style ={"text-align":"justify", "text-justify": "inter-word"}
                                 )
                             ], md=6, style = {"text-align":"justify"}),

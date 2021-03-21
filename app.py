@@ -10,7 +10,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-import indexString, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar, Search, Datos, Ingresar
+import indexString, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar, Search, Datos, Ingresar, Certificados
 
 cred = credentials.Certificate("formularioesfm-firebase-adminsdk-f9csg-da5faa24f2.json")
 firebase_admin.initialize_app(cred,{'projectId': 'formularioesfm'},'pagina')#,{'projectId': 'formularioesfm'},'pagina')
@@ -75,15 +75,31 @@ def confirmar_correo(correo, boleta):
 #        return 'https' + href[4:]
 @app.callback([Output('layout-1','children')], [Input('url', 'pathname'), Input('url','href')])
 def display_page(pathname, url):
+    ides = {'2020330309': {'Nombre': 'Rodolfo Carlos Lagunas Jardines ',
+  'Id': 'in1ui2w',
+  'Curso': ['Ingeniería de Datos*20211'],
+  'Fecha': 'Enero del 2020',
+  'Periodo': 20211},
+  '2020330046': {'Nombre': 'Antonio Elias Vargas ',
+  'Id': 'ineids2',
+  'Curso': ['Ingeniería de Datos*20211', 'Pandas para Ciencia de Datos*20211'],
+  'Fecha': 'Enero del 2020',
+  'Periodo': 20211},
+  }
     
-    if pathname == '/' or pathname == '/acerca':
+    if pathname[1:] in ides:
+        return [[Header.header()] + Certificados.cursos(ides[pathname[1:]]) + Footer.footer()]
+    elif "/constancia" in pathname:
+        #print(pathname[12:])
+        return [ [Header.header()] + Certificados.certificado(pathname[12:])+ Footer.footer()]
+    elif pathname == '/' or pathname == '/acerca':
         return [[Header.header()] + index.acerca()+ Footer.footer()]
     elif pathname == '/cursos':
         return [[Header.header()] + Cursos.cursos()+ Footer.footer()]
     elif pathname == '/proyectos':
         return [[Header.header()] +Proyectos.proyectos()+ Footer.footer()]
     elif pathname == '/soporte':
-        return [[Header.header()] +Soporte.soporte()+ Footer.footer()]
+        return [[Header.header()] +Soporte.soporte()+ Footer.footer()]  
     elif pathname == '/convocatoria':
         return [[Header.header()] +Convocatoria.convocatoria()+ Footer.footer()]
     elif pathname[0:7] == '/search':

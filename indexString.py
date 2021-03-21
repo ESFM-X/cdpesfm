@@ -118,6 +118,11 @@ string = """
                 background:linear-gradient(0deg,#ff7100 , #33005a)!important;
                 color: white;
             }
+            .bg-danger{
+                background:linear-gradient(0deg,#7b1448, #40122A)!important;
+                color: white;
+               
+            }
 
 
             .btn-outline-success{

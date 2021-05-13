@@ -1,22 +1,23 @@
 import dash_bootstrap_components as dbc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
-
-imagenes = {"in1ui2w0":{"url":"https://fotos.subefotos.com/a5dad493c6f317756745afd664e5bff1o.png",
-                        "curso":"Taller de Ingeniería de Datos",
-                        "Fecha": "20 de marzo del 2021",
-                        "Nombre": "Rodolfo Carlos Lagunas  Jardines"
-                        },
-            "ineids20":{"url":"https://fotos.subefotos.com/3a9322d21dd18c53a1b76747925cf4e2o.png",
-                        "curso":"Taller de Ingeniería de Datos",
-                        "Fecha": "Enero del 2021",
-                        "Nombre": "Antonio Elias Vargas",
-                        },
-            "ineids21":{"url":"https://fotos.subefotos.com/27736987a9028e2b57ed5281f339e449o.png",
-                        "curso":"Taller de Pandas para Ciencia de Datos",
-                        "Fecha": "20 de marzo del 2021",
-                        "Nombre": "Antonio Elias Vargas"
-                        }}
+import ides2021
+imagenes = ides2021.images() 
+# {"in1ui2w0":{"url":"https://fotos.subefotos.com/a5dad493c6f317756745afd664e5bff1o.png",
+#                         "curso":"Taller de Ingeniería de Datos",
+#                         "Fecha": "20 de marzo del 2021",
+#                         "Nombre": "Rodolfo Carlos Lagunas  Jardines"
+#                         },
+#             "ineids20":{"url":"https://fotos.subefotos.com/3a9322d21dd18c53a1b76747925cf4e2o.png",
+#                         "curso":"Taller de Ingeniería de Datos",
+#                         "Fecha": "Enero del 2021",
+#                         "Nombre": "Antonio Elias Vargas",
+#                         },
+#             "ineids21":{"url":"https://fotos.subefotos.com/27736987a9028e2b57ed5281f339e449o.png",
+#                         "curso":"Taller de Pandas para Ciencia de Datos",
+#                         "Fecha": "20 de marzo del 2021",
+#                         "Nombre": "Antonio Elias Vargas"
+#                         }}
 
 def certificado(datos):
     if datos not in imagenes:
@@ -61,10 +62,10 @@ def cursos(datos):
                     [
                         dbc.CardImg(src=imagenes[datos["Id"] + str(indice)]["url"], top=True, style = {"width":"100%"}),
                         html.P(
-                            curso[:curso.find('*')], style = {"text-align":"center"}
+                            curso[:], style = {"text-align":"center"}
                         ),
                         html.Footer(
-                           [ html.Small("Periodo " + curso[curso.find('*') + 1:], style = {"padding-right":20}),# className="text-muted")
+                           [ html.Small("Período " + "2021-1", style = {"padding-right":20}),# className="text-muted")
                             #dbc.Button("Ver", color="danger", href = "/constancia/" + datos["Id"] + str(indice)  ),
                            ]
                         ),
@@ -73,7 +74,7 @@ def cursos(datos):
                         dbc.Button( "http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice), href = "http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice),  color="link", style = { "font-size":"0.77em",  "color": "#f9aa3a"}),
                         html.Br(),
                         html.Div([
-                            dbc.Button("LinkedIn", color="link", href = "https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name="+ curso[:curso.find('*')].replace(" ", "%20") + "&organizationId=72339480&issueYear="+ str(datos["Periodo"])[:-1] + "&issueMonth="+ (str(datos["Periodo"])[-1] if str(datos["Periodo"])[-1] != "2" else "7") + "&certUrl=http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice)  + "&certId="+ datos["Id"] + str(indice)   + "&credentialDoesNotExpire=1" , style = { "color": "#f9aa3a"}, target = "_blank" ),
+                            dbc.Button("LinkedIn", color="link", href = "https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name="+ curso.replace(" ", "%20") + "&organizationId=72339480&issueYear="+ str(datos["Periodo"])[:-1] + "&issueMonth="+ (str(datos["Periodo"])[-1] if str(datos["Periodo"])[-1] != "2" else "7") + "&certUrl=http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice)  + "&certId="+ datos["Id"] + str(indice)   + "&credentialDoesNotExpire=1" , style = { "color": "#f9aa3a"}, target = "_blank" ),
                             dbc.Button("Facebook", color="link", href = "https://www.facebook.com/sharer/sharer.php?u=" +"http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice) , style = { "color": "#f9aa3a"}, target = "_blank"  ),
                             dbc.Button("Twitter", color="link", href = "https://twitter.com/intent/tweet/?hashtags=CdPESFM&text=" + "http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice)  , style = { "color": "#f9aa3a"}, target = "_blank"  )
                         ],style = {"text-align":"center"}),

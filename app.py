@@ -5,12 +5,12 @@ from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 import time, random, string, datetime
-
+import indexString
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-import indexString, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar, Search, Datos, Ingresar, Certificados
+import indexString, ides2021, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar, Search, Datos, Ingresar, Certificados
 
 cred = credentials.Certificate("formularioesfm-firebase-adminsdk-f9csg-da5faa24f2.json")
 firebase_admin.initialize_app(cred,{'projectId': 'formularioesfm'},'pagina')#,{'projectId': 'formularioesfm'},'pagina')
@@ -75,20 +75,14 @@ def confirmar_correo(correo, boleta):
 #        return 'https' + href[4:]
 @app.callback([Output('layout-1','children')], [Input('url', 'pathname'), Input('url','href')])
 def display_page(pathname, url):
-    ides = {'2020330309': {'Nombre': 'Rodolfo Carlos Lagunas Jardines ',
-  'Id': 'in1ui2w',
-  'Curso': ['Ingeniería de Datos*20211'],
-  'Fecha': 'Enero del 2020',
-  'Periodo': 20211},
-  '2020330046': {'Nombre': 'Antonio Elias Vargas ',
-  'Id': 'ineids2',
-  'Curso': ['Ingeniería de Datos*20211', 'Pandas para Ciencia de Datos*20211'],
-  'Fecha': 'Enero del 2020',
-  'Periodo': 20211},
-  }
-    
-    if pathname[1:] in ides:
-        return [[Header.header()] + Certificados.cursos(ides[pathname[1:]]) + Footer.footer()]
+    ides = ides2021.dicti()
+    try:
+        f = int(pathname[1:])
+    except:
+        f = None
+
+    if f in ides:
+        return [[Header.header()] + Certificados.cursos(ides[f]) + Footer.footer()]
     elif "/constancia" in pathname:
         #print(pathname[12:])
         return [ [Header.header()] + Certificados.certificado(pathname[12:])+ Footer.footer()]
@@ -477,5 +471,5 @@ def desabilitar_cursos(cursos):
                                                             ]]
 if __name__ == '__main__':
     #print(dbc.themes.BOOTSTRAP)
-    app.run_server(debug = True, host = '192.168.0.7')
+    app.run_server(debug = True)#, host = '192.168.0.7')
 

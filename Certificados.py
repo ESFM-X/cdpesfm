@@ -55,7 +55,7 @@ def certificado(datos):
             style = {"padding":"20px", "padding-top":20, "padding-bottom":5})
             ]
 def cursos(datos):
-    url = "https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=Experta%en%Patita&organizationId=72339480&issueYear=2020&issueMonth=8&certUrl=http://www.cdpesfm.college/&certId=123dsad&credentialDoesNotExpire=1"
+    url = "https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=Experta%en%Patita&organizationId=72339480&issueYear=2020&issueMonth=8&certUrl=https://cdp.esfm-x.com/&certId=123dsad&credentialDoesNotExpire=1"
     card_contents = [dbc.CardBody(
             [
                 html.Blockquote(
@@ -71,12 +71,12 @@ def cursos(datos):
                         ),
                         html.Small("Enlaces para compartir: ", style = {"color":"white"}),
                         html.Br(),
-                        dbc.Button( "http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice), href = "http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice),  color="link", style = { "font-size":"0.77em",  "color": "#f9aa3a"}),
+                        dbc.Button( "https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice), href = "https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice),  color="link", style = { "font-size":"0.77em",  "color": "#f9aa3a"}),
                         html.Br(),
                         html.Div([
-                            dbc.Button("LinkedIn", color="link", href = "https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name="+ curso.replace(" ", "%20") + "&organizationId=72339480&issueYear="+ str(datos["Periodo"])[:-1] + "&issueMonth="+ (str(datos["Periodo"])[-1] if str(datos["Periodo"])[-1] != "2" else "7") + "&certUrl=http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice)  + "&certId="+ datos["Id"] + str(indice)   + "&credentialDoesNotExpire=1" , style = { "color": "#f9aa3a"}, target = "_blank" ),
-                            dbc.Button("Facebook", color="link", href = "https://www.facebook.com/sharer/sharer.php?u=" +"http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice) , style = { "color": "#f9aa3a"}, target = "_blank"  ),
-                            dbc.Button("Twitter", color="link", href = "https://twitter.com/intent/tweet/?hashtags=CdPESFM&text=" + "http://www.cdpesfm.college/constancia/"+ datos["Id"] + str(indice)  , style = { "color": "#f9aa3a"}, target = "_blank"  )
+                            dbc.Button("LinkedIn", color="link", href = "https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name="+ curso.replace(" ", "%20") + "&organizationId=72339480&issueYear="+ str(datos["Periodo"])[:-1] + "&issueMonth="+ (str(datos["Periodo"])[-1] if str(datos["Periodo"])[-1] != "2" else "7") + "&certUrl=https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice)  + "&certId="+ datos["Id"] + str(indice)   + "&credentialDoesNotExpire=1" , style = { "color": "#f9aa3a"}, target = "_blank" ),
+                            dbc.Button("Facebook", color="link", href = "https://www.facebook.com/sharer/sharer.php?u=" +"https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice) , style = { "color": "#f9aa3a"}, target = "_blank"  ),
+                            dbc.Button("Twitter", color="link", href = "https://twitter.com/intent/tweet/?hashtags=CdPESFM&text=" + "https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice)  , style = { "color": "#f9aa3a"}, target = "_blank"  )
                         ],style = {"text-align":"center"}),
                     ],
                     className="blockquote"#,style = {'text-align':'justify'}

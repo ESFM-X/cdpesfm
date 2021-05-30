@@ -7,16 +7,16 @@ def footer():
                                 [
                                     html.Div(
                                         [
-                                            html.Img(src="https://fotos.subefotos.com/8d86f83446ffc85b28747e51e666f4b5o.png", height = 50, style = {"margin":5}),
-                                            html.Img(src="https://fotos.subefotos.com/076df224d0bb0b75749aa140d0c955afo.png", height = 50, style = {"margin":5}),
-                                            html.Img(src="https://fotos.subefotos.com/d832491f73b5c1db1fa9d6d704177fcao.png", height = 40, style = {"margin":5}),
-                                            html.Div([
-                                                html.A('Facebook   ', href = '#', style = {'color':'#3b5998', 'text-align':'center'}),    #,target='_blank'
-                                                #html.A('   Instagram', href = '#', style = {'padding-left':10,'color':'#C13584', 'text-align':'center'}),    #,target='_blank'
-                                                html.A('   Discord', href = 'https://discord.com/users/396799146977132544',target='_blank', style = {'padding-left':10,'color':'#7289da', 'text-align':'center'})    
-                                            ], style = {"padding-left":65})
+                                            html.Img(src="https://i.ibb.co/D4VHFGT/imagen-2021-05-30-170643.png", height = 50, style = {"margin":5}),
+                                            html.Img(src="https://i.ibb.co/xmfr6Mt/Logotipo-Final.png", height = 50, style = {"margin":5}),
+                                            html.Img(src="https://i.ibb.co/2sfj6CZ/imagen-2021-05-30-170731.png", height = 35, style = {"margin":5, "padding-left":15}),
+                                            # html.Div([
+                                            #     html.A('Facebook   ', href = '#', style = {'color':'#3b5998', 'text-align':'center'}),    #,target='_blank'
+                                            #     #html.A('   Instagram', href = '#', style = {'padding-left':10,'color':'#C13584', 'text-align':'center'}),    #,target='_blank'
+                                            #     html.A('   Discord', href = 'https://discord.com/users/396799146977132544',target='_blank', style = {'padding-left':10,'color':'#7289da', 'text-align':'center'})    
+                                            # ], style = {"padding-left":65})
                                         ],
-                                        style = {"margin-left":"auto","margin-right":"auto", "width":282, "padding-bottom":10}
+                                        style = {"margin-left":"auto","margin-right":"auto", "width":400, "padding-bottom":10}
                                     ),
                                     dbc.Row(
                                         [
@@ -42,15 +42,15 @@ def footer():
                                                 
                                                 html.H5("Responsables"),#, className="display-6"),
                                                 html.Hr(className="my-2"),
-                                                html.P('Julio Hernández - joules.hdz@gmail.com'),
+                                                html.P('Julio Hernández - juliohg@esfm-x.com'),
                                                 html.P('Alejandro Cardona - acardmx@gmail.com '),
-                                                html.P('Rodolfo Lagunas - rodolfolj97@gmail.com '),
+                                                html.P('Rodolfo Lagunas - rodolfolj@esfm-x.com '),
                                                 #html.P('club.de.programacion.esfm@gmail.com')
                                             ], style = {'color':'black'}),
                                         
                                         ]
                                     ),
-                                    html.H6("Página hecha con ❤ por el CdP ESFM", style = {"text-align":'center', "padding-top":30}),
+                                    html.H6(["Hecho con ❤ por ", html.A("ESFM-X", href = "https://esfm-x.com")], style = {"text-align":'center', "padding-top":30}),
                                     #html.Div(dbc.Button('El canal de YouTube de Aurus Tek', color="link", style = {'width':'100%','margin-left':'auto','margin-right':'auto','color':'#8797b4'}), className="lead", style = {'width':'70%','margin-left':'auto','margin-right':'auto', 'padding-top':0})
                                     
                                 ],

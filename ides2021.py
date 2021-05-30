@@ -201,6 +201,11 @@ def dicti():
   'Id': 'pyljvg3',
   'Curso': ['Python From Zero to Hero'],
   'Fecha': 'Febrero del 2021',
+  'Periodo': 20211},
+  2020330046:{'Nombre': 'Antonio Elías Vargas ',
+  'Id': 'ineids2',
+  'Curso': ['Pandas para Ciencia de Datos', 'Ingeniería de Datos'],
+  'Fecha': 'Febrero del 2021',
   'Periodo': 20211}}
 
 def images():
@@ -208,6 +213,16 @@ def images():
   'curso': 'Python From Zero to Hero',
   'Fecha': 'Febrero del 2021',
   'Nombre': 'Díaz Tello Claudia Brigitte'},
+  "ineids20":{"url":"https://i.ibb.co/MpsL502/Constancia-El-as-Vargas-1.jpg",
+                        "curso":"Ingeniería de Datos",
+                        "Fecha": "Febrero del 2021",
+                        "Nombre": "Antonio Elias Vargas",
+                        },
+            "ineids21":{"url":"https://i.ibb.co/ZdBRm5X/Constancia-El-as-Vargas-2.jpg",
+                        "curso":"Pandas para Ciencia de Datos",
+                        "Fecha": "Febrero del 2021",
+                        "Nombre": "Antonio Elias Vargas"
+                        },
  'pyi6sfx0': {'url': 'https://i.ibb.co/NnKwjvm/Constancia-L-pez-Mart-nez.jpg',
   'curso': 'Python From Zero to Hero',
   'Fecha': 'Febrero del 2021',

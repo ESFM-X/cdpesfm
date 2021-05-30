@@ -9,7 +9,7 @@ def acerca():
 
     return [dbc.Jumbotron(
         [   
-            html.Img(src = "https://fotos.subefotos.com/bd8cab011c4c316e1ea0e74f2aed492eo.png",#"https://fotos.subefotos.com/5a7f422ce2c2cc675934b38b137a547fo.png",
+            html.Img(src = "https://i.ibb.co/QmGbkxq/Logo-Ancho-Final-Negro.png",#"https://fotos.subefotos.com/5a7f422ce2c2cc675934b38b137a547fo.png",
                     style = {"width":"100%"}),
             html.Div([
                 html.H1("Únete a la comunidad", className="display-3", style ={"font-size":"3rem"} ),
@@ -60,7 +60,7 @@ def acerca():
                                 ], md= 8#, xl = 9
                         ),
                         dbc.Col([
-                                html.Img(src="https://fotos.subefotos.com/69f56b49685599ad2bc8377462bfeb6fo.jpg", style = {"width":"100%","margin-left":"auto" }) 
+                                html.Img(src="https://i.ibb.co/1m6xSTn/9-ESFM-2.jpg", style = {"width":"100%","margin-left":"auto" }) 
                         ], md = 4#, xl = 3
 
                         )
@@ -83,7 +83,7 @@ def acerca():
                 html.Hr(className="my-2"),
                 dbc.Row([
                             dbc.Col([
-                                html.Img(src="https://fotos.subefotos.com/98e19371bee1fc70e3a4cef70db67df1o.jpg", style = {"width":"100%","margin-left":"auto", "padding-bottom":30 }),
+                                html.Img(src="https://i.ibb.co/ngp0mLV/151263335-431011394788665-3824541555941416493-n-2.jpg", style = {"width":"100%","margin-left":"auto", "padding-bottom":30 }),
                                 
                             ],md=4 ),
                             dbc.Col([
@@ -122,7 +122,7 @@ def acerca():
                     dbc.Card(
                             dbc.CardBody(
                                 [
-                                    html.Img(src= "https://scontent-qro1-2.xx.fbcdn.net/v/t1.0-9/84334500_3354175324656855_3738219206634635264_o.jpg?_nc_cat=103&ccb=3&_nc_sid=174925&_nc_ohc=3eI6GvyuZ3IAX9W9SPa&_nc_ht=scontent-qro1-2.xx&oh=d31a2101d330f59baefa033d628c2c5a&oe=6050BD82", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.Img(src= "https://i.ibb.co/yddmYV1/imagen-2021-05-30-165715.png", style = {'width':'100%',"padding-bottom":"20px"}),
                                     html.H4("Juan F. Martínez ", className="card-title"),
                                     html.H6("Python from Zero to Hero", className="card-subtitle"),
                                     html.P(
@@ -141,7 +141,7 @@ def acerca():
                     dbc.Card(
                             dbc.CardBody(
                                 [
-                                    html.Img(src= "https://fotos.subefotos.com/793d2d132fcd7f15d7ab184c14135800o.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.Img(src= "https://i.ibb.co/mqxpCbT/photo4996863693920774385-2.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
                                     html.H4("Sara I. López", className="card-title"),
                                     html.H6("Python from Zero to Hero", className="card-subtitle"),
                                     html.P(
@@ -162,7 +162,7 @@ def acerca():
                     dbc.Card(
                             dbc.CardBody(
                                 [
-                                    html.Img(src= "https://fotos.subefotos.com/728dc97fe209707bc1a306ae593b79d9o.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.Img(src= "https://i.ibb.co/kh8B8DT/66398624-2261797620703860-4737014727492763648-o.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
                                     html.H4("Antonio E. Vargas", className="card-title"),
                                     html.H6("Ingeniería de Datos | Pandas para Ciencia de Datos", className="card-subtitle"),
                                     html.P(
@@ -181,7 +181,7 @@ def acerca():
                     dbc.Card(
                             dbc.CardBody(
                                 [
-                                    html.Img(src= "https://fotos.subefotos.com/e7831a11c32c4b3d46d27e61098e0b31o.png", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.Img(src= "https://i.ibb.co/wYNjzSV/imagen-2021-05-30-165635.png", style = {'width':'100%',"padding-bottom":"20px"}),
                                     html.H4("Miriam R. Castelán", className="card-title"),
                                     html.H6("Python from Zero to Hero", className="card-subtitle"),
                                     html.P(
@@ -200,7 +200,7 @@ def acerca():
                     dbc.Card(
                             dbc.CardBody(
                                 [
-                                    html.Img(src= "https://fotos.subefotos.com/8b856c930a58e2ad4d4c54d09b28c698o.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.Img(src= "https://i.ibb.co/MngVmyV/61613845-2457168924570134-8565666540718915584-o.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
                                     html.H4("Rodrigo T. Castillo", className="card-title"),
                                     html.H6("Ingeniería de Datos", className="card-subtitle"),
                                     html.P(
@@ -219,7 +219,7 @@ def acerca():
                     dbc.Card(
                             dbc.CardBody(
                                 [
-                                    html.Img(src= "https://fotos.subefotos.com/df21b0acdb6dd39c91c7f23f386c4467o.png", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.Img(src= "https://fotos.subefotos.com/df21b0acdb6dd39c91c7f23f386c4467o.png", alt="Avatar de Eduardo G.",  style = {'width':'100%',"padding-bottom":"20px"}),
                                     html.H4("Eduardo G. Cazares", className="card-title"),
                                     html.H6("Ingeniería de Datos", className="card-subtitle"),
                                     html.P(
@@ -238,7 +238,7 @@ def acerca():
                     dbc.Card(
                             dbc.CardBody(
                                 [
-                                    html.Img(src= "https://fotos.subefotos.com/a3afe547c4346dfd48e7377e50f02354o.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.Img(src= "https://i.ibb.co/5WmqFZS/IMG-20210211-161255-2.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
                                     html.H4("Eric O. Pardo", className="card-title"),
                                     html.H6("Pandas para Ciencia de Datos   ", className="card-subtitle"),
                                     html.P(
@@ -257,7 +257,7 @@ def acerca():
                     dbc.Card(
                             dbc.CardBody(
                                 [
-                                    html.Img(src= "https://cdn.discordapp.com/attachments/769365116562833429/812541520140959764/IMG_20201209_231732_531.jpg", style = {'width':'100%',"padding-bottom":"20px"}),
+                                    html.Img(src= "https://i.ibb.co/4TBxKpY/imagen-2021-05-30-170435.png", style = {'width':'100%',"padding-bottom":"20px"}),
                                     html.H4("Jaaziel A. Bautista", className="card-title"),
                                     html.H6("Python from Zero to Hero   ", className="card-subtitle"),
                                     html.P(

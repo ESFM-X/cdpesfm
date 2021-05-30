@@ -44,7 +44,7 @@ def certificado(datos):
                                 ),
                                 
                                 html.P(
-                                    imagenes[datos]["Nombre"].capitalize().split(' ')[0] + """ realizó las actividades y adquirió los conocimientos necesarios para poder concluir satisfactoriamente del """ + imagenes[datos]["curso"] + """, demostrando las habilidades mediante retos precisos que verifican su correcto aprendizaje.""", 
+                                    imagenes[datos]["Nombre"].capitalize().split(' ')[0] + """ realizó las actividades y adquirió los conocimientos necesarios para poder concluir satisfactoriamente el curso de """ + imagenes[datos]["curso"] + """, demostrando las habilidades mediante retos precisos que verifican su correcto aprendizaje.""", 
                                     style ={"text-align":"justify", "text-justify": "inter-word"}
                                 )
                             ], md=6, style = {"text-align":"justify"}),
@@ -71,7 +71,7 @@ def cursos(datos):
                         ),
                         html.Small("Enlaces para compartir: ", style = {"color":"white"}),
                         html.Br(),
-                        dbc.Button( "https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice), href = "https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice),  color="link", style = { "font-size":"0.77em",  "color": "#f9aa3a"}),
+                        dbc.Button( "https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice), href = "https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice),  color="link", style = { "font-size":"0.77em",  "color": "#f9aa3a", "word-wrap": "break-word"}),
                         html.Br(),
                         html.Div([
                             dbc.Button("LinkedIn", color="link", href = "https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name="+ curso.replace(" ", "%20") + "&organizationId=72339480&issueYear="+ str(datos["Periodo"])[:-1] + "&issueMonth="+ (str(datos["Periodo"])[-1] if str(datos["Periodo"])[-1] != "2" else "7") + "&certUrl=https://cdp.esfm-x.com/constancia/"+ datos["Id"] + str(indice)  + "&certId="+ datos["Id"] + str(indice)   + "&credentialDoesNotExpire=1" , style = { "color": "#f9aa3a"}, target = "_blank" ),
@@ -89,7 +89,7 @@ def cursos(datos):
                                             className="lead",
                                         ),
                                         html.P(
-                                            datos["Nombre"].capitalize().split(' ')[0] + ", has participado en las actividades del club complentando los siguientes cursos/talleres:",
+                                            datos["Nombre"].capitalize().split(' ')[0] + ", has participado en las actividades del club completando los siguientes cursos/talleres:",
                                         ),
                     #dbc.Row([
                     dbc.CardColumns([ dbc.Card(card_content, color="danger", inverse=True) for card_content in card_contents]),

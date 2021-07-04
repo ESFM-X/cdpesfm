@@ -6,7 +6,7 @@ Este sitio proporciona una imagen al club y una manera de pedir contacto mediant
 
 ## Sitio 🚀
 
-🔗: [cdp.esfm-x.com][https://cdp.esfm-x.com)
+🔗: [cdp.esfm-x.com](https://cdp.esfm-x.com)
 
 
 ## Construido con 🛠️

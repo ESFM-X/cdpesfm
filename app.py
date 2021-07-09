@@ -244,7 +244,7 @@ def borrar_datos(mensaje):
             )
 def enviar(n_clicks,data, cursos, motivo, comentario):
     if n_clicks:
-        if cursos and motivo and comentario:#varios cursos and args[8] !=[''] and args[8] != None: 
+        if cursos and motivo:#varios cursos and args[8] !=[''] and args[8] != None: 
         
                     doc_ref = db.collection('Encuesta 2021-2').document(''.join([random.choice('qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNMÑ1234567890') for _ in range(7)] ) )  
                     doc_ref.set({

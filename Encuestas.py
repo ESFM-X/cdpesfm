@@ -15,7 +15,7 @@ def encuesta_satis():
     return [html.Div([
                                             html.H1("Encuesta 2021-2", className="display-3" , style ={"font-size":"3rem", "color":color_letra}, ),
                                             html.P(
-                                                ["En el CdP ESFM estamos comprometidos en mejorar nuestros cursos y hacer que más personas sean parte de la comunidad satisfaciendo sus expectativas. Si te inscribiste en algún curso del semestre 2021-2 y",html.B(" no lo pudiste concluir"),", favor de llenar el siguiente formulario."],style = {"color":color_letra},
+                                                ["En el CdP ESFM estamos comprometidos a mejorar nuestros cursos y hacer que más personas sean parte de la comunidad satisfaciendo sus expectativas. Si te inscribiste en algún curso del semestre 2021-2 y ",html.B(" no lo pudiste concluir"),", favor de llenar el siguiente formulario."],style = {"color":color_letra},
                                                 className="lead",
                                             ),
                                         
@@ -49,14 +49,15 @@ def encuesta_satis():
                                                                 'margin-right':'auto'
                                                             }, placeholder = 'Cursos'
                                                         ),
-                                                        html.H6('Elige el motivo que más te acomode:', style = {'margin-top':margen,'color':color_letra}),
+                                                        html.H6('Elige el motivo que más te identifique:', style = {'margin-top':margen,'color':color_letra}),
 
                                                         dcc.Dropdown(id = 'motivo',
                                                             options=[
                                                                 {'label': 'No pude organizar mi tiempo', 'value': 'Tiempo'},
                                                                 {'label': 'No me agradó el temario', 'value': 'Temario'},
                                                                 {'label': 'Tuve algún conflicto de aprendizaje', 'value': 'Conflicto de aprendizaje'},
-                                                                {'label':'Otra', 'value':'Otro'}
+                                                                {'label': 'La plataforma se me hizo complicada', 'value': 'Conflicto de aprendizaje'},
+                                                                {'label':'Otro', 'value':'Otro'}
                                                             
                                                             ],
                                                             value='',
@@ -69,7 +70,7 @@ def encuesta_satis():
                                                                 'margin-right':'auto'
                                                             }, placeholder = 'Motivo'
                                                         ),
-                                                        html.H6('(Opcional) Escribe algún comentario: ', style = {'margin-top':margen,'color':color_letra}),
+                                                        html.H6('Escribe algún comentario (opcional): ', style = {'margin-top':margen,'color':color_letra}),
                                                         #dcc.Input(id = 'objetivo',value='', type='text', style ={'width':'auto','width': 300, 'height':100}),
                                                         dbc.Textarea( id = 'comentario_encuesta',
                                                             placeholder='Escribenos comentarios, opiniones y recomendaciones para entregas futuras',

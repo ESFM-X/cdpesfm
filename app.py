@@ -10,7 +10,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-import indexString, ides2021, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar, Search, Datos, Ingresar, Certificados
+import indexString, ides2021, Header, Footer, index, Cursos, Proyectos, Soporte, send_email, Convocatoria, Enviar, Search, Datos, Ingresar, Certificados, Encuestas
 
 cred = credentials.Certificate("formularioesfm-firebase-adminsdk-f9csg-da5faa24f2.json")
 firebase_admin.initialize_app(cred,{'projectId': 'formularioesfm'},'pagina')#,{'projectId': 'formularioesfm'},'pagina')
@@ -83,6 +83,8 @@ def display_page(pathname, url):
 
     if f in ides:
         return [[Header.header()] + Certificados.cursos(ides[f]) + Footer.footer()]
+    elif "/encuesta/2021-2" in pathname: 
+        return [[Header.header()]+ Encuestas.encuesta_satis() + Footer.footer()]
     elif "/constancia" in pathname:
         #print(pathname[12:])
         return [ [Header.header()] + Certificados.certificado(pathname[12:])+ Footer.footer()]
@@ -95,7 +97,7 @@ def display_page(pathname, url):
     elif pathname == '/soporte':
         return [[Header.header()] +Soporte.soporte()+ Footer.footer()]  
     elif pathname == '/convocatoria':
-        return [[Header.header()] +Convocatoria.convocatoria()+ Footer.footer()]
+        return [[Header.header()] +Convocatoria.convocatoria2()+ Footer.footer()]
     elif pathname[0:7] == '/search':
         return [[Header.header()] + [Search.page] + Footer.footer()]
     elif pathname == '/ingresar':
@@ -225,6 +227,41 @@ def borrar_datos(mensaje):
         return ['','','']
     else:
         raise dash.exceptions.PreventUpdate()
+
+@app.callback(
+    [Output('cursos','value'),Output('motivo','value'),Output('comentario_encuesta','value')],
+    [Input('Confirmacion_encuesta','children')]
+)
+def borrar_datos(mensaje):
+    if mensaje == 'Enviado con éxito, agradecemos tus comentarios':
+        return ['','','']
+    else:
+        raise dash.exceptions.PreventUpdate()
+######################################################################################### ENCUESTA
+@app.callback([Output('Confirmacion_encuesta', 'children'), Output('Confirmacion_encuesta','style')],# Output('objetivo','value')],
+              [Input('go_encuesta', 'n_clicks'), Input('session-stored2','data')],
+                [State('cursos', 'value'),State('motivo', 'value'),State('comentario_encuesta', 'value')],
+            )
+def enviar(n_clicks,data, cursos, motivo, comentario):
+    if n_clicks:
+        if cursos and motivo and comentario:#varios cursos and args[8] !=[''] and args[8] != None: 
+        
+                    doc_ref = db.collection('Encuesta 2021-2').document(''.join([random.choice('qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNMÑ1234567890') for _ in range(7)] ) )  
+                    doc_ref.set({
+                            u'cursos': cursos,
+                            u'cursos': cursos,
+                            u'motivo': motivo,
+                            u'comentario': comentario
+                    })
+                    return ['Enviado con éxito, agradecemos tus comentarios',{'color':'green', 'padding':10}]#,args[6]]
+        elif n_clicks >= 1:
+            return ['Tienes que llenar todos los campos',{'color':'#7b1448', 'padding':10}]#,args[6]+' ']
+        else:
+            return ['',{'color':'#db0000', 'padding':10}]#,args[6]]
+    else:
+        raise dash.exceptions.PreventUpdate()
+
+
 #########################################################################################
 @app.callback([Output('Confirmacion', 'children'), Output('Confirmacion','style')],# Output('objetivo','value')],
               [Input('go', 'n_clicks'), Input('session-stored2','data')],
@@ -470,6 +507,6 @@ def desabilitar_cursos(cursos):
                                                                 #{'label': 'Machine Learning', 'value': 'Mac', 'disabled': True}
                                                             ]]
 if __name__ == '__main__':
-    #print(dbc.themes.BOOTSTRAP)
+    
     app.run_server(debug = True)#, host = '192.168.0.7')
 

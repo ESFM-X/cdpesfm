@@ -1,0 +1,1 @@
+periodo_actual = '2021-2'

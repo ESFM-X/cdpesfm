@@ -1,9 +1,6 @@
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-from dash.dependencies import Input, Output, State
-import colors
-
-
+from config import periodo
 
 def acerca():
 
@@ -109,7 +106,7 @@ def acerca():
             html.Div([
                 html.H1("Alumnos destacados", className="display-3", style ={"margin-left":"auto"} ),
                 html.P(
-                    "Semestre 2021-1",
+                    f"Semestre {periodo.periodo_actual[0:-1]}{ '1' if periodo.periodo_actual[-1] == '2' else  '2'}",
                     className="lead"
                 ),
                 html.Hr(className="my-2"),

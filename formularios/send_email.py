@@ -1,7 +1,7 @@
 import smtplib
 from cryptography.fernet import Fernet #pip3 install cryptography
 from email.message import EmailMessage
-import time
+
 
 u = 'club.de.programacion.esfm@gmail.com'
 sent_from = u

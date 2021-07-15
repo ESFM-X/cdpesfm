@@ -6,7 +6,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-cred = credentials.Certificate("formularioesfm-firebase-adminsdk-f9csg-da5faa24f2.json")
+cred = credentials.Certificate("secret/formularioesfm-firebase-adminsdk-f9csg-da5faa24f2.json")
 firebase_admin.initialize_app(cred)#,{'projectId': 'formularioesfm'})
 db = firestore.client()
 

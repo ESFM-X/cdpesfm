@@ -1,12 +1,11 @@
 ### Local imports
-import time, random, string, datetime, requests, json
+import  random, requests
 
 ### Dash packages
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
-from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 
 ### DB packages
@@ -17,8 +16,7 @@ from firebase_admin import firestore
 
 ### Local modules
 from config import indexString
-from dash_templates import Header, Footer, index, Cursos, Proyectos, Soporte, Search
-from datos_alumnos import  Certificados
+from dash_templates import Header, Footer, index, Cursos, Proyectos, Soporte, Search, Certificados
 from formularios import send_email, Convocatoria, Enviar, Encuestas
 from secret import apikeys
 from config import periodo
